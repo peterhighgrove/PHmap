@@ -2,3 +2,15 @@ git branch -m main master
 git fetch origin
 git branch -u origin/master master
 git remote set-head origin -a
+
+This worked and sent the files to github repo
+----------------------------------------------
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/peterhighgrove/PHmap.git
+git pull origin master --allow-unrelated-histories
+git push origin master
+    info: please complete authentication in your browser...
+
+
