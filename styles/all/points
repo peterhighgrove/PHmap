@@ -102,6 +102,68 @@ place=isolated_dwelling [0x3909 resolution 24]
 
 aerialway=*  [0x11508 resolution 24]
 
+tourism=alpine_hut [0x2b02 resolution 22]
+tourism=attraction & historic=* [0x2c02 resolution 24]
+tourism=attraction [0x2c04 resolution 24]
+tourism=artwork [0x2c04 resolution 24]
+tourism=aquarium [0x2c07 resolution 24]
+tourism=camp_site | tourism=caravan_site [0x2b03 resolution 23]
+tourism=chalet [0x2b02 resolution 22]
+tourism=guest_house [0x2b02 resolution 24]
+tourism=hostel [0x2b02 resolution 22]
+tourism=hotel | tourism=motel [0x2b01 resolution 24] 
+tourism=information | information=board [0x4c00 resolution 22]
+# tourism=lean_to replaces some uses of amenity=shelter
+tourism=lean_to | amenity=lean_to [0x2b07 resolution 23]
+tourism=wilderness_hut [0x2b07 resolution 23]
+tourism=museum [0x2c02 resolution 24]
+tourism=picnic_site [0x4a00 resolution 24] 
+tourism=theme_park [0x2c01 resolution 24]
+tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 22] 
+tourism=wine_cellar [0x2c0a resolution 24]
+tourism=zoo [0x2c07 resolution 24]
+
+barrier=bollard | barrier=bus_trap [0x660f resolution 24]
+barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate [0x660f resolution 24]
+barrier=lift_gate | barrier=gate [0x11503 resolution 24]
+
+man_made=communications_tower | communication:radio=yes | communication:television=yes [0x6700 resolution 23]
+man_made=tower & (tower:type=observation | tourism=viewpoint) [0x6701 resolution 23]
+man_made=tower & tower:type=communication [0x6700 resolution 23]
+man_made=tower & !(tower:type=bell_tower) [0x6411 resolution 23]
+man_made=tower|landmark=chimney [0x6411 resolution 22]
+man_made=water_tower [0x6412 resolution 22]
+man_made=watermill [0x6415 resolution 24]
+man_made=mast [0x6702 resolution 24]
+man_made=cairn [0x11504 resolution 24]
+man_made=cross | historic=wayside_cross [0x11509 resolution 24]
+
+power=generator & generator:source=wind [0x6413 resolution 20]
+power=pole | power=tower [0x6408 resolution 24]
+
+natural=tree & (name=* | denotation=landmark) & type!=conifer [0x6416 resolution 24]
+natural=tree & (name=* | denotation=landmark) & type=conifer [0x6417 resolution 24]
+
+
+# Edge 705 displays 0x650a,0x6511,0x6512,0x6513,0x6603,0x6614 as hollow white circles, no menu
+natural=cave_entrance [0x6619 resolution 22]
+natural=cliff [0x6607 resolution 24]
+#peho peak org natural=peak {name '${name|def:}${ele|height:m=>ft|def:}' } [0x6616 resolution 24]
+natural=peak {add mkgmap:label:1='${name} (${ele})' | '${ele}' | '${name}'} [0x6616 resolution 22]
+natural=rock [0x6614 resolution 24]
+natural=saddle {name '${name}-${description}-${ele}' | '${name}-${ele}'} [0x11505 resolution 23]
+natural=volcano [0x2c0c resolution 24]
+
+landuse=basin|landuse=reservoir [0x650f resolution 24]
+
+natural=beach [0x6604 resolution 24]
+natural=glacier [0x650a resolution 24]
+natural=spring [0x6511 resolution 24]
+natural=stream [0x6512 resolution 23]
+natural=water & name=* [0x6603 resolution 24]
+natural=waterfall | waterway=waterfall [0x6508 resolution 24]
+natural=wetland & name=* [0x6513 resolution 24]
+
 aeroway=airport [0x2f04 resolution 22]
 aeroway=aerodrome [0x2f04 resolution 22]
 aeroway=helipad [0x2f04 resolution 23]
@@ -111,7 +173,6 @@ amenity=atm [0x2f06 resolution 24]
 #peho wrong typ amenity=arts_centre [0x2c04 resolution 24]
 amenity=bank [0x2f06 resolution 24]
 amenity=bar [0x2d02 resolution 24]
-#peho added bbq and bench
 amenity=bbq [0x11501 resolution 24]
 amenity=bench [0x6605 resolution 24]
 amenity=biergarten [0x2d02 resolution 24]
@@ -242,45 +303,6 @@ leisure=sports_center | leisure=sports_centre { name '${name} (${sport})' | '${n
 #leisure=track { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24]
 leisure=water_park [0x2b04 resolution 24]
 
-
-man_made=communications_tower | communication:radio=yes | communication:television=yes [0x6700 resolution 23]
-man_made=tower & (tower:type=observation | tourism=viewpoint) [0x6701 resolution 23]
-man_made=tower & tower:type=communication [0x6700 resolution 23]
-man_made=tower & !(tower:type=bell_tower) [0x6411 resolution 23]
-# man_made=tower|landmark=chimney [0x6411 resolution 22]
-man_made=water_tower [0x6412 resolution 22]
-man_made=watermill [0x6415 resolution 24]
-man_made=mast [0x6702 resolution 24]
-man_made=cairn [0x11504 resolution 24]
-man_made=cross | historic=wayside_cross [0x11509 resolution 24]
-
-power=generator & generator:source=wind [0x6413 resolution 20]
-power=pole | power=tower [0x6408 resolution 24]
-
-natural=tree & (name=* | denotation=landmark) & type!=conifer [0x6416 resolution 24]
-natural=tree & (name=* | denotation=landmark) & type=conifer [0x6417 resolution 24]
-
-
-# Edge 705 displays 0x650a,0x6511,0x6512,0x6513,0x6603,0x6614 as hollow white circles, no menu
-natural=cave_entrance [0x6619 resolution 22]
-natural=cliff [0x6607 resolution 24]
-#peho peak org natural=peak {name '${name|def:}${ele|height:m=>ft|def:}' } [0x6616 resolution 24]
-natural=peak {add mkgmap:label:1='${name} (${ele})' | '${ele}' | '${name}'} [0x6616 resolution 22]
-natural=rock [0x6614 resolution 24]
-natural=saddle {name '${name}-${description}-${ele}' | '${name}-${ele}'} [0x11505 resolution 23]
-natural=volcano [0x2c0c resolution 24]
-
-landuse=basin|landuse=reservoir [0x650f resolution 24]
-
-natural=beach [0x6604 resolution 24]
-natural=glacier [0x650a resolution 24]
-natural=spring [0x6511 resolution 24]
-natural=stream [0x6512 resolution 23]
-natural=water & name=* [0x6603 resolution 24]
-natural=waterfall | waterway=waterfall [0x6508 resolution 24]
-natural=wetland & name=* [0x6513 resolution 24]
-
-
 railway=halt [0x2f08 resolution 23]
 railway=station [0x2f08 resolution 22]
 railway=tram_stop [0x2f17 resolution 24]
@@ -330,38 +352,8 @@ sport=skating [0x2d08 resolution 24]
 sport=skiing [0x2d06 resolution 24]
 sport=swimming & access!=private [0x2d09 resolution 24]
 
-tourism=alpine_hut [0x2b02 resolution 22]
-tourism=attraction & historic=* [0x2c02 resolution 24]
-tourism=attraction [0x2c04 resolution 24]
-tourism=artwork [0x2c04 resolution 24]
-tourism=aquarium [0x2c07 resolution 24]
-#peho 2b05->2b03
-tourism=camp_site | tourism=caravan_site [0x2b03 resolution 23]
-tourism=chalet [0x2b02 resolution 22]
-tourism=guest_house [0x2b02 resolution 24]
-tourism=hostel [0x2b02 resolution 22]
-#peho-added to typ
-tourism=hotel | tourism=motel [0x2b01 resolution 24] 
-#peho added  | information=board
-tourism=information | information=board [0x4c00 resolution 22]
-# tourism=lean_to replaces some uses of amenity=shelter
-#peho added amenity=lean_to
-tourism=lean_to | amenity=lean_to [0x2b07 resolution 23]
-tourism=wilderness_hut [0x2b07 resolution 23]
-tourism=museum [0x2c02 resolution 24]
-#peho-added to typ
-tourism=picnic_site [0x4a00 resolution 24] 
-tourism=theme_park [0x2c01 resolution 24]
-#peho-added to typ
-tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 22] 
-tourism=wine_cellar [0x2c0a resolution 24]
-tourism=zoo [0x2c07 resolution 24]
-
-barrier=bollard | barrier=bus_trap [0x660f resolution 24]
-barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate [0x660f resolution 24]
-barrier=lift_gate | barrier=gate [0x11503 resolution 24]
 
 <finalize>
 # The finalizer section is executed for each element when a rule with an element type matches
-name=* { name '${name}' }
+# name=* { name '${name}' }
 include 'inc/address';
