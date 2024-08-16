@@ -18,12 +18,12 @@ building=* & area!=no [0x13 resolution 24 continue]
 
 aeroway=airport [0x07 resolution 20]
 aeroway=aerodrome [0x07 resolution 20]
-aeroway=helipad [0x0e resolution 22]
+aeroway=helipad [0x07 resolution 22]
 
 amenity=kindergarten [0x0a resolution 24]
 amenity=cafe | amenity=fast_food | amenity=restaurant | amenity=food_court [0x08 resolution 24]
 amenity=college [0x0a resolution 24]
-parking=underground | parking=multi-storey [0x06 resolution 24]
+parking=underground | parking=multi-storey [0x05 resolution 24]
 amenity=parking & access!=private & is_in(landuse,residential,any)=no [0x05 resolution 19]
 amenity=parking | parking=surface [0x05 resolution 24]
 amenity=prison [0x04 resolution 24]
@@ -51,8 +51,7 @@ leisure=pitch [0x41 resolution 22]
 leisure=recreation_ground [0x19 resolution 21]
 #peho-changed del #comment
 leisure=sports_center | leisure=sports_centre [0x19 resolution 20]
-#leisure=stadium [0x19 resolution 20]
-#peho-changed 19->10f00
+leisure=stadium [0x19 resolution 20]
 leisure=track & area=yes [0x10f00 resolution 21]  
 leisure=water_park [0x09 resolution 23]
 
@@ -84,12 +83,11 @@ landuse=quarry [0x10f01 resolution 19]
 landuse=village_green [0x17 resolution 20]
 place=village [0x03 resolution 19]
 
-#landuse=recreation_ground [0x19 resolution 19]
 # dedicate resolution 24 for building=* instead of related landuse=*
-#landuse=industrial [0x0c resolution 23-19]
-#landuse=retail [0x08 resolution 23-20]
-#landuse=commercial [0x0c resolution 19]
-#landuse=construction [0x0c resolution 21]
+landuse=industrial [0x0c resolution 23-19]
+landuse=retail [0x08 resolution 23-20]
+landuse=commercial [0x08 resolution 19]
+landuse=construction [0x0c resolution 21]
 
 landuse=basin|landuse=reservoir|natural=bay {set natural=water}
 
@@ -134,7 +132,7 @@ place=islet & name=* [0x53 resolution 20]
 highway=* & area=yes [0x05 resolution 24]
 
 historic=museum | historic=memorial [0x1e resolution 21]
-historic=archaeological_site | historic=ruins [0x1e resolution 21]
+historic=archaeological_site | historic=ruins [0x1d resolution 21]
 
 # landuse of university etc. that is not a building
 (amenity=university|amenity=school|amenity=hospital) & (building!=*) [0x10 resolution 19-23]
@@ -150,9 +148,6 @@ historic=archaeological_site | historic=ruins [0x1e resolution 21]
 # [0x13 resolution 24]
 # man_made=* & area=yes
 # [0x13 resolution 24]
-
-#include 'inc/water_polygons';
-#include 'inc/landuse_polygons';
 
 <finalize>
 # The finalizer section is executed for each element when a rule with an element type matches
