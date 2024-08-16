@@ -254,7 +254,7 @@ include 'inc/roadspeed';
 # calculate the access rules
 include 'inc/access';
 
-name=* { name '${name}' }
+# name=* { name '${name}' }
 
 highway=* & ref=* { addlabel '${ref}' }
 highway=* & int_ref=* { addlabel '${int_ref}' }
