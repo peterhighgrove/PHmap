@@ -1,0 +1,516 @@
+Splitter version 654 compiled 2024-04-05T14:44:59+0100
+boundary-tags=use-exclude-list
+cache=
+description=SE_240804_OSM_tile
+geonames-file=
+handle-element-version=remove
+ignore-osm-bounds=false
+keep-complete=true
+mapid=63210001
+max-areas=2048
+max-nodes=1600000
+max-threads=12 (auto)
+mixed=false
+no-trim=false
+num-tiles=
+output=pbf
+output-dir=C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE
+overlap=auto
+polygon-desc-file=
+polygon-file=
+precomp-sea=
+problem-file=
+problem-report=
+resolution=13
+route-rel-values=
+search-limit=200000
+split-file=
+status-freq=120
+stop-after=dist
+wanted-admin-level=5
+write-kml=
+Elapsed time: 0s   Memory: Current 245MB (5MB used, 240MB free) Max 7282MB
+Time started: Fri Aug 16 16:47:46 CEST 2024
+Map is being split for resolution 13:
+ - area boundaries are aligned to 0x800 map units (0.0439453125 degrees)
+ - areas are multiples of 0x800 map units wide and high
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+10 000 000 nodes parsed... id=1568539454
+20 000 000 nodes parsed... id=2638980216
+30 000 000 nodes parsed... id=3824684319
+40 000 000 nodes parsed... id=5259876485
+50 000 000 nodes parsed... id=6501607995
+60 000 000 nodes parsed... id=7354007461
+70 000 000 nodes parsed... id=8833318163
+80 000 000 nodes parsed... id=10000474863
+90 000 000 nodes parsed... id=11585245753
+Fill-densities-map pass took 22985 ms
+Exact map coverage read from input file(s) is (55.02652645111084,10.5413818359375) to (69.06643152236938,24.224724769592285)
+Rounded map coverage is (55.01953125,10.5029296875) to (69.08203125,24.2578125)
+Splitting nodes into areas containing a maximum of 1 600 000 nodes each...
+Highest node count in a single grid element is 237 364
+Solving partition (55.01953125,10.5029296875) to (69.08203125,24.2578125) with 94 461 291 nodes
+Splitting tile (55.01953125,10.5029296875) to (69.08203125,24.2578125) with 94 461 291 nodes, goal is to get near 60 tiles
+S2 FULL: step 1 goal: 60 tiles, now: 92 tile(s). The smallest node count is 100975 (6 %), cache size 35
+S1 SOME: step 1 goal: 60 tiles, now: 78 tile(s). The smallest node count is 388626 (24 %), cache size 6
+S2 FULL: step 2 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1327169 (82 %), cache size 566
+S1 SOME: step 2 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1012067 (63 %), cache size 1 438
+S1 SOME: step 3 goal: 60 tiles, now: 61 tile(s). The smallest node count is 1478338 (92 %), cache size 1 955
+S2 FULL: step 3 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1462011 (91 %), cache size 5 182
+S1 SOME: step 7 goal: 60 tiles, now: 61 tile(s). The smallest node count is 1490342 (93 %), cache size 10 780
+S1 SOME goal was 60 tiles, solver finished with : 61 tile(s). The smallest node count is 1490342 (93 %)
+S2 FULL: step 5 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1483571 (92 %), cache size 17 561
+S2 FULL: step 10 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1483907 (92 %), cache size 33 190
+S2 FULL: step 11 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1484462 (92 %), cache size 33 360
+S2 FULL: step 12 goal: 60 tiles, now: 62 tile(s). The smallest node count is 1486016 (92 %), cache size 33 363
+S2 FULL goal was 60 tiles, solver finished with : 62 tile(s). The smallest node count is 1486016 (92 %)
+Solution is nice. Can't find a better solution with search-limit 200000: 61 tile(s). The smallest node count is 1490342 (93 %)
+Final solution: 61 tile(s). The smallest node count is 1490342 (93 %)
+This seems to be nice.
+Area 63210001 covers (55.01953125,15.908203125) to (57.3046875,24.1259765625) and contains 1493633 nodes (93 %)
+Area 63210002 covers (56.689453125,13.974609375) to (57.3046875,15.908203125) and contains 1498847 nodes (93 %)
+Area 63210003 covers (56.689453125,10.5029296875) to (57.3046875,13.974609375) and contains 1519143 nodes (94 %)
+Area 63210004 covers (55.01953125,13.7109375) to (56.689453125,14.4580078125) and contains 1582445 nodes (98 %)
+Area 63210005 covers (55.01953125,14.4580078125) to (56.689453125,15.908203125) and contains 1586879 nodes (99 %)
+Area 63210006 covers (55.01953125,10.6787109375) to (55.6787109375,13.7109375) and contains 1574645 nodes (98 %)
+Area 63210007 covers (55.6787109375,10.5029296875) to (56.689453125,13.0517578125) and contains 1512826 nodes (94 %)
+Area 63210008 covers (55.6787109375,13.0517578125) to (56.689453125,13.7109375) and contains 1545015 nodes (96 %)
+Area 63210009 covers (67.32421875,15.46875) to (69.08203125,24.2578125) and contains 1580945 nodes (98 %)
+Area 63210010 covers (63.8525390625,21.97265625) to (67.32421875,24.2578125) and contains 1568018 nodes (98 %)
+Area 63210011 covers (63.8525390625,12.3486328125) to (65.126953125,17.75390625) and contains 1531880 nodes (95 %)
+Area 63210012 covers (65.126953125,13.7109375) to (67.32421875,17.75390625) and contains 1575882 nodes (98 %)
+Area 63210013 covers (63.8525390625,17.75390625) to (64.9072265625,21.97265625) and contains 1532671 nodes (95 %)
+Area 63210014 covers (64.9072265625,17.75390625) to (65.830078125,21.97265625) and contains 1547002 nodes (96 %)
+Area 63210015 covers (65.830078125,17.75390625) to (67.32421875,21.97265625) and contains 1557981 nodes (97 %)
+Area 63210016 covers (60.1171875,17.9736328125) to (63.8525390625,24.2578125) and contains 1584427 nodes (99 %)
+Area 63210017 covers (60.1171875,11.6015625) to (61.69921875,13.53515625) and contains 1547407 nodes (96 %)
+Area 63210018 covers (60.8642578125,14.9853515625) to (61.69921875,17.9736328125) and contains 1597573 nodes (99 %)
+Area 63210019 covers (60.8642578125,13.53515625) to (61.69921875,14.9853515625) and contains 1598557 nodes (99 %)
+Area 63210020 covers (60.1171875,13.53515625) to (60.8642578125,15.1171875) and contains 1591145 nodes (99 %)
+Area 63210021 covers (60.1171875,15.1171875) to (60.8642578125,16.2158203125) and contains 1546458 nodes (96 %)
+Area 63210022 covers (60.1171875,16.2158203125) to (60.8642578125,17.9736328125) and contains 1565337 nodes (97 %)
+Area 63210023 covers (61.69921875,11.6015625) to (63.8525390625,12.48046875) and contains 1539798 nodes (96 %)
+Area 63210024 covers (61.69921875,12.48046875) to (62.6220703125,14.501953125) and contains 1502403 nodes (93 %)
+Area 63210025 covers (61.69921875,14.501953125) to (62.6220703125,15.8642578125) and contains 1599668 nodes (99 %)
+Area 63210026 covers (61.69921875,15.8642578125) to (62.6220703125,17.0947265625) and contains 1509423 nodes (94 %)
+Area 63210027 covers (61.69921875,17.0947265625) to (62.6220703125,17.9736328125) and contains 1596974 nodes (99 %)
+Area 63210028 covers (62.6220703125,14.150390625) to (63.28125,17.9736328125) and contains 1522114 nodes (95 %)
+Area 63210029 covers (62.6220703125,12.48046875) to (63.28125,14.150390625) and contains 1567103 nodes (97 %)
+Area 63210030 covers (63.28125,13.4033203125) to (63.8525390625,17.9736328125) and contains 1542867 nodes (96 %)
+Area 63210031 covers (63.28125,12.48046875) to (63.8525390625,13.4033203125) and contains 1585617 nodes (99 %)
+Area 63210032 covers (57.3046875,18.6328125) to (60.1171875,24.2578125) and contains 1517782 nodes (94 %)
+Area 63210033 covers (57.3046875,15.6005859375) to (57.83203125,18.6328125) and contains 1526065 nodes (95 %)
+Area 63210034 covers (59.4580078125,15.6005859375) to (60.1171875,16.8310546875) and contains 1528046 nodes (95 %)
+Area 63210035 covers (59.4580078125,16.8310546875) to (60.1171875,17.75390625) and contains 1538749 nodes (96 %)
+Area 63210036 covers (59.4580078125,17.75390625) to (60.1171875,18.6328125) and contains 1545021 nodes (96 %)
+Area 63210037 covers (58.623046875,15.6005859375) to (59.4580078125,16.259765625) and contains 1499875 nodes (93 %)
+Area 63210038 covers (57.83203125,15.6005859375) to (58.623046875,16.259765625) and contains 1553238 nodes (97 %)
+Area 63210039 covers (57.83203125,16.259765625) to (58.7548828125,18.6328125) and contains 1529530 nodes (95 %)
+Area 63210040 covers (58.7548828125,18.10546875) to (59.4580078125,18.6328125) and contains 1521160 nodes (95 %)
+Area 63210041 covers (58.7548828125,16.259765625) to (59.4580078125,17.2265625) and contains 1490342 nodes (93 %)
+Area 63210042 covers (59.2822265625,17.2265625) to (59.4580078125,18.10546875) and contains 1542572 nodes (96 %)
+Area 63210043 covers (58.7548828125,17.2265625) to (59.2822265625,18.10546875) and contains 1598876 nodes (99 %)
+Area 63210044 covers (57.3046875,10.5029296875) to (58.095703125,11.865234375) and contains 1491781 nodes (93 %)
+Area 63210045 covers (57.3046875,12.0849609375) to (58.095703125,12.6123046875) and contains 1511820 nodes (94 %)
+Area 63210046 covers (57.3046875,11.865234375) to (57.7001953125,12.0849609375) and contains 1497374 nodes (93 %)
+Area 63210047 covers (57.7001953125,11.865234375) to (58.095703125,12.0849609375) and contains 1598597 nodes (99 %)
+Area 63210048 covers (58.095703125,10.5029296875) to (60.1171875,11.6455078125) and contains 1592613 nodes (99 %)
+Area 63210049 covers (58.095703125,11.6455078125) to (58.53515625,12.6123046875) and contains 1577657 nodes (98 %)
+Area 63210050 covers (58.53515625,11.6455078125) to (59.1943359375,12.6123046875) and contains 1542301 nodes (96 %)
+Area 63210051 covers (59.1943359375,11.6455078125) to (60.1171875,12.6123046875) and contains 1573013 nodes (98 %)
+Area 63210052 covers (57.3046875,12.6123046875) to (58.2275390625,13.4033203125) and contains 1582752 nodes (98 %)
+Area 63210053 covers (57.3046875,13.4033203125) to (58.2275390625,14.3701171875) and contains 1575326 nodes (98 %)
+Area 63210054 covers (57.3046875,14.3701171875) to (58.2275390625,15.6005859375) and contains 1591846 nodes (99 %)
+Area 63210055 covers (59.6337890625,12.6123046875) to (60.1171875,15.6005859375) and contains 1520304 nodes (95 %)
+Area 63210056 covers (59.23828125,14.150390625) to (59.6337890625,15.6005859375) and contains 1491887 nodes (93 %)
+Area 63210057 covers (59.23828125,12.6123046875) to (59.6337890625,14.150390625) and contains 1492505 nodes (93 %)
+Area 63210058 covers (58.53515625,12.6123046875) to (59.23828125,14.0625) and contains 1539799 nodes (96 %)
+Area 63210059 covers (58.2275390625,12.6123046875) to (58.53515625,14.0625) and contains 1563585 nodes (97 %)
+Area 63210060 covers (58.2275390625,14.0625) to (58.7548828125,15.6005859375) and contains 1553489 nodes (97 %)
+Area 63210061 covers (58.7548828125,14.0625) to (59.23828125,15.6005859375) and contains 1568703 nodes (98 %)
+Creating the initial areas took 1016 ms
+61 areas:
+Area 63210001: 2564096,741376 to 2670592,1124352 covers (0x272000,0xb5000) to (0x28c000,0x112800) SE_240804_OSM_tile
+Area 63210002: 2641920,651264 to 2670592,741376 covers (0x285000,0x9f000) to (0x28c000,0xb5000) SE_240804_OSM_tile
+Area 63210003: 2641920,489472 to 2670592,651264 covers (0x285000,0x77800) to (0x28c000,0x9f000) SE_240804_OSM_tile
+Area 63210004: 2564096,638976 to 2641920,673792 covers (0x272000,0x9c000) to (0x285000,0xa4800) SE_240804_OSM_tile
+Area 63210005: 2564096,673792 to 2641920,741376 covers (0x272000,0xa4800) to (0x285000,0xb5000) SE_240804_OSM_tile
+Area 63210006: 2564096,497664 to 2594816,638976 covers (0x272000,0x79800) to (0x279800,0x9c000) SE_240804_OSM_tile
+Area 63210007: 2594816,489472 to 2641920,608256 covers (0x279800,0x77800) to (0x285000,0x94800) SE_240804_OSM_tile
+Area 63210008: 2594816,608256 to 2641920,638976 covers (0x279800,0x94800) to (0x285000,0x9c000) SE_240804_OSM_tile
+Area 63210009: 3137536,720896 to 3219456,1130496 covers (0x2fe000,0xb0000) to (0x312000,0x114000) SE_240804_OSM_tile
+Area 63210010: 2975744,1024000 to 3137536,1130496 covers (0x2d6800,0xfa000) to (0x2fe000,0x114000) SE_240804_OSM_tile
+Area 63210011: 2975744,575488 to 3035136,827392 covers (0x2d6800,0x8c800) to (0x2e5000,0xca000) SE_240804_OSM_tile
+Area 63210012: 3035136,638976 to 3137536,827392 covers (0x2e5000,0x9c000) to (0x2fe000,0xca000) SE_240804_OSM_tile
+Area 63210013: 2975744,827392 to 3024896,1024000 covers (0x2d6800,0xca000) to (0x2e2800,0xfa000) SE_240804_OSM_tile
+Area 63210014: 3024896,827392 to 3067904,1024000 covers (0x2e2800,0xca000) to (0x2ed000,0xfa000) SE_240804_OSM_tile
+Area 63210015: 3067904,827392 to 3137536,1024000 covers (0x2ed000,0xca000) to (0x2fe000,0xfa000) SE_240804_OSM_tile
+Area 63210016: 2801664,837632 to 2975744,1130496 covers (0x2ac000,0xcc800) to (0x2d6800,0x114000) SE_240804_OSM_tile
+Area 63210017: 2801664,540672 to 2875392,630784 covers (0x2ac000,0x84000) to (0x2be000,0x9a000) SE_240804_OSM_tile
+Area 63210018: 2836480,698368 to 2875392,837632 covers (0x2b4800,0xaa800) to (0x2be000,0xcc800) SE_240804_OSM_tile
+Area 63210019: 2836480,630784 to 2875392,698368 covers (0x2b4800,0x9a000) to (0x2be000,0xaa800) SE_240804_OSM_tile
+Area 63210020: 2801664,630784 to 2836480,704512 covers (0x2ac000,0x9a000) to (0x2b4800,0xac000) SE_240804_OSM_tile
+Area 63210021: 2801664,704512 to 2836480,755712 covers (0x2ac000,0xac000) to (0x2b4800,0xb8800) SE_240804_OSM_tile
+Area 63210022: 2801664,755712 to 2836480,837632 covers (0x2ac000,0xb8800) to (0x2b4800,0xcc800) SE_240804_OSM_tile
+Area 63210023: 2875392,540672 to 2975744,581632 covers (0x2be000,0x84000) to (0x2d6800,0x8e000) SE_240804_OSM_tile
+Area 63210024: 2875392,581632 to 2918400,675840 covers (0x2be000,0x8e000) to (0x2c8800,0xa5000) SE_240804_OSM_tile
+Area 63210025: 2875392,675840 to 2918400,739328 covers (0x2be000,0xa5000) to (0x2c8800,0xb4800) SE_240804_OSM_tile
+Area 63210026: 2875392,739328 to 2918400,796672 covers (0x2be000,0xb4800) to (0x2c8800,0xc2800) SE_240804_OSM_tile
+Area 63210027: 2875392,796672 to 2918400,837632 covers (0x2be000,0xc2800) to (0x2c8800,0xcc800) SE_240804_OSM_tile
+Area 63210028: 2918400,659456 to 2949120,837632 covers (0x2c8800,0xa1000) to (0x2d0000,0xcc800) SE_240804_OSM_tile
+Area 63210029: 2918400,581632 to 2949120,659456 covers (0x2c8800,0x8e000) to (0x2d0000,0xa1000) SE_240804_OSM_tile
+Area 63210030: 2949120,624640 to 2975744,837632 covers (0x2d0000,0x98800) to (0x2d6800,0xcc800) SE_240804_OSM_tile
+Area 63210031: 2949120,581632 to 2975744,624640 covers (0x2d0000,0x8e000) to (0x2d6800,0x98800) SE_240804_OSM_tile
+Area 63210032: 2670592,868352 to 2801664,1130496 covers (0x28c000,0xd4000) to (0x2ac000,0x114000) SE_240804_OSM_tile
+Area 63210033: 2670592,727040 to 2695168,868352 covers (0x28c000,0xb1800) to (0x292000,0xd4000) SE_240804_OSM_tile
+Area 63210034: 2770944,727040 to 2801664,784384 covers (0x2a4800,0xb1800) to (0x2ac000,0xbf800) SE_240804_OSM_tile
+Area 63210035: 2770944,784384 to 2801664,827392 covers (0x2a4800,0xbf800) to (0x2ac000,0xca000) SE_240804_OSM_tile
+Area 63210036: 2770944,827392 to 2801664,868352 covers (0x2a4800,0xca000) to (0x2ac000,0xd4000) SE_240804_OSM_tile
+Area 63210037: 2732032,727040 to 2770944,757760 covers (0x29b000,0xb1800) to (0x2a4800,0xb9000) SE_240804_OSM_tile
+Area 63210038: 2695168,727040 to 2732032,757760 covers (0x292000,0xb1800) to (0x29b000,0xb9000) SE_240804_OSM_tile
+Area 63210039: 2695168,757760 to 2738176,868352 covers (0x292000,0xb9000) to (0x29c800,0xd4000) SE_240804_OSM_tile
+Area 63210040: 2738176,843776 to 2770944,868352 covers (0x29c800,0xce000) to (0x2a4800,0xd4000) SE_240804_OSM_tile
+Area 63210041: 2738176,757760 to 2770944,802816 covers (0x29c800,0xb9000) to (0x2a4800,0xc4000) SE_240804_OSM_tile
+Area 63210042: 2762752,802816 to 2770944,843776 covers (0x2a2800,0xc4000) to (0x2a4800,0xce000) SE_240804_OSM_tile
+Area 63210043: 2738176,802816 to 2762752,843776 covers (0x29c800,0xc4000) to (0x2a2800,0xce000) SE_240804_OSM_tile
+Area 63210044: 2670592,489472 to 2707456,552960 covers (0x28c000,0x77800) to (0x295000,0x87000) SE_240804_OSM_tile
+Area 63210045: 2670592,563200 to 2707456,587776 covers (0x28c000,0x89800) to (0x295000,0x8f800) SE_240804_OSM_tile
+Area 63210046: 2670592,552960 to 2689024,563200 covers (0x28c000,0x87000) to (0x290800,0x89800) SE_240804_OSM_tile
+Area 63210047: 2689024,552960 to 2707456,563200 covers (0x290800,0x87000) to (0x295000,0x89800) SE_240804_OSM_tile
+Area 63210048: 2707456,489472 to 2801664,542720 covers (0x295000,0x77800) to (0x2ac000,0x84800) SE_240804_OSM_tile
+Area 63210049: 2707456,542720 to 2727936,587776 covers (0x295000,0x84800) to (0x29a000,0x8f800) SE_240804_OSM_tile
+Area 63210050: 2727936,542720 to 2758656,587776 covers (0x29a000,0x84800) to (0x2a1800,0x8f800) SE_240804_OSM_tile
+Area 63210051: 2758656,542720 to 2801664,587776 covers (0x2a1800,0x84800) to (0x2ac000,0x8f800) SE_240804_OSM_tile
+Area 63210052: 2670592,587776 to 2713600,624640 covers (0x28c000,0x8f800) to (0x296800,0x98800) SE_240804_OSM_tile
+Area 63210053: 2670592,624640 to 2713600,669696 covers (0x28c000,0x98800) to (0x296800,0xa3800) SE_240804_OSM_tile
+Area 63210054: 2670592,669696 to 2713600,727040 covers (0x28c000,0xa3800) to (0x296800,0xb1800) SE_240804_OSM_tile
+Area 63210055: 2779136,587776 to 2801664,727040 covers (0x2a6800,0x8f800) to (0x2ac000,0xb1800) SE_240804_OSM_tile
+Area 63210056: 2760704,659456 to 2779136,727040 covers (0x2a2000,0xa1000) to (0x2a6800,0xb1800) SE_240804_OSM_tile
+Area 63210057: 2760704,587776 to 2779136,659456 covers (0x2a2000,0x8f800) to (0x2a6800,0xa1000) SE_240804_OSM_tile
+Area 63210058: 2727936,587776 to 2760704,655360 covers (0x29a000,0x8f800) to (0x2a2000,0xa0000) SE_240804_OSM_tile
+Area 63210059: 2713600,587776 to 2727936,655360 covers (0x296800,0x8f800) to (0x29a000,0xa0000) SE_240804_OSM_tile
+Area 63210060: 2713600,655360 to 2738176,727040 covers (0x296800,0xa0000) to (0x29c800,0xb1800) SE_240804_OSM_tile
+Area 63210061: 2738176,655360 to 2760704,727040 covers (0x29c800,0xa0000) to (0x2a2000,0xb1800) SE_240804_OSM_tile
+Generating problem list for 61 distinct areas
+Processing 61 areas in a single pass
+Pseudo areas:
+Pseudo area -62 covers (69.08203125,-180.0) to (90.0,180.0)
+Pseudo area -63 covers (-90.0,-180.0) to (55.01953125,180.0)
+Pseudo area -64 covers (55.01953125,-180.0) to (69.08203125,10.5029296875)
+Pseudo area -65 covers (55.01953125,10.5029296875) to (55.6787109375,10.6787109375)
+Pseudo area -66 covers (60.1171875,10.5029296875) to (69.08203125,11.6015625)
+Pseudo area -67 covers (63.8525390625,11.6015625) to (69.08203125,12.3486328125)
+Pseudo area -68 covers (65.126953125,12.3486328125) to (69.08203125,13.7109375)
+Pseudo area -69 covers (67.32421875,13.7109375) to (69.08203125,15.46875)
+Pseudo area -70 covers (55.01953125,24.1259765625) to (57.3046875,24.2578125)
+Pseudo area -71 covers (55.01953125,24.2578125) to (69.08203125,180.0)
+cached 68 combinations of areas that form rectangles.
+AreaGridTree [512][512] for grid area (-90.0,-180.0) to (90.0,180.0) requires max. 5 checks for each node (0 sub grid(s))
+Starting problem-list-generator pass(es)
+-----------------------------------
+Starting problem-list-generator pass 1 of 1
+way Map: uses SparseLong2IntMap
+coord Map: uses SparseLong2IntMap
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+10 000 000 nodes parsed... id=1568539454
+coord MAP occupancy: 10 000 000, number of area dictionary entries: 351
+20 000 000 nodes parsed... id=2638980216
+coord MAP occupancy: 20 000 000, number of area dictionary entries: 359
+30 000 000 nodes parsed... id=3824684319
+coord MAP occupancy: 30 000 000, number of area dictionary entries: 366
+40 000 000 nodes parsed... id=5259876485
+coord MAP occupancy: 40 000 000, number of area dictionary entries: 372
+50 000 000 nodes parsed... id=6501607995
+coord MAP occupancy: 50 000 000, number of area dictionary entries: 376
+60 000 000 nodes parsed... id=7354007461
+coord MAP occupancy: 60 000 000, number of area dictionary entries: 378
+70 000 000 nodes parsed... id=8833318163
+coord MAP occupancy: 70 000 000, number of area dictionary entries: 378
+80 000 000 nodes parsed... id=10000474863
+coord MAP occupancy: 80 000 000, number of area dictionary entries: 378
+90 000 000 nodes parsed... id=11585245753
+coord MAP occupancy: 90 000 000, number of area dictionary entries: 378
+1 000 000 ways parsed... id=165541999
+2 000 000 ways parsed... id=285905198
+3 000 000 ways parsed... id=417522515
+4 000 000 ways parsed... id=609814572
+5 000 000 ways parsed... id=744877616
+6 000 000 ways parsed... id=971429736
+7 000 000 ways parsed... id=1119277274
+8 000 000 ways parsed... id=1283072221
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+100 000 relations parsed... id=10218707
+200 000 relations parsed... id=16094332
+coord Map: 94 465 613 stored long/int pairs require ca. 8 bytes per pair. 3 407 651 chunks are used, the avg. number of values in one 64-chunk is 27.
+coord Map details: ~760 MB, including 91 array(s) with 8 MB
+
+way Map: 8 158 574 stored long/int pairs require ca. 11 bytes per pair. 888 882 chunks are used, the avg. number of values in one 64-chunk is 9.
+way Map details: ~88 MB, including 10 array(s) with 8 MB
+
+
+  Number of stored area combis for nodes: 94 465 613
+  Number of stored area combis for ways: 8 158 574
+  Number of stored Integers for rels: 0
+  Number of stored combis in dictionary: 456
+  Number of detected problem ways: 29 722
+  Number of detected problem rels: 4 342
+  JVM Memory Info: Current 3781MB (2691MB used, 1090MB free) Max 7282MB
+
+Problem-list-generator pass 1 took 24849 ms
+Problem-list-generator pass(es) took 24911 ms
+cached 59 combinations of areas that form rectangles.
+AreaGridTree [512][512] for grid area (55.01953125,10.5029296875) to (69.08203125,24.2578125) requires max. 4 checks for each node (0 sub grid(s))
+-----------------------------------
+Executing multi-tile analyses phase 1
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+100 000 relations parsed... id=10218707
+200 000 relations parsed... id=16094332
+Stats for MultiTileProcessor pass 1
+  SparseBitSet problemRels contains now 4 342 Ids.
+  SparseBitSet neededWays contains now 29 722 Ids.
+  SparseBitSet mpWays contains now 0 Ids.
+  SparseBitSet neededNodes contains now 0 Ids.
+  Number of stored relations: 244 251
+  Number of stored tile combinations in multiTileDictionary: 327
+Status: Finished collecting relations.
+  JVM Memory Info: Current 3781MB (3368MB used, 413MB free) Max 7282MB
+starting to resolve relations containing problem relations ...
+Finished adding members of problem relations to problem lists.
+Stats for MultiTileProcessor pass 1
+  SparseBitSet neededWays contains now 145 162 Ids.
+  SparseBitSet mpWays contains now 122 483 Ids.
+  SparseBitSet neededNodes contains now 106 Ids.
+  Number of stored relations: 4 372
+  Number of stored tile combinations in multiTileDictionary: 327
+Status: starting to collect ids of needed way nodes ...
+Multi-tile analyses phase 1 took 720 ms
+-----------------------------------
+Executing multi-tile analyses phase 2
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+1 000 000 ways parsed... id=165541999
+2 000 000 ways parsed... id=285905198
+3 000 000 ways parsed... id=417522515
+4 000 000 ways parsed... id=609814572
+5 000 000 ways parsed... id=744877616
+6 000 000 ways parsed... id=971429736
+7 000 000 ways parsed... id=1119277274
+8 000 000 ways parsed... id=1283072221
+Stats for MultiTileProcessor pass 2
+  SparseBitSet neededWays contains now 145 162 Ids.
+  SparseBitSet mpWays contains now 6 232 Ids.
+  SparseBitSet neededNodes contains now 5 790 122 Ids.
+  Number of stored relations: 4 372
+  Number of stored tile combinations in multiTileDictionary: 327
+Status: Finished collecting problem ways.
+Found 138 930 of 145 162 needed ways.
+Found 116 251 of 122 483 needed multipolygon ways.
+Stats for MultiTileProcessor pass 2
+  SparseBitSet neededWays contains now 145 162 Ids.
+  SparseBitSet mpWays contains now 6 232 Ids.
+  SparseBitSet neededNodes contains now 5 790 122 Ids.
+  Number of stored relations: 4 372
+  Number of stored tile combinations in multiTileDictionary: 327
+Status: Starting to collect coordinates for 5 790 122 needed nodes.
+  JVM Memory Info: Current 3725MB (962MB used, 2763MB free) Max 7282MB
+Multi-tile analyses phase 2 took 7940 ms
+-----------------------------------
+Executing multi-tile analyses phase 3
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+10 000 000 nodes parsed... id=1568539454
+20 000 000 nodes parsed... id=2638980216
+30 000 000 nodes parsed... id=3824684319
+40 000 000 nodes parsed... id=5259876485
+50 000 000 nodes parsed... id=6501607995
+60 000 000 nodes parsed... id=7354007461
+70 000 000 nodes parsed... id=8833318163
+80 000 000 nodes parsed... id=10000474863
+90 000 000 nodes parsed... id=11585245753
+1 000 000 ways parsed... id=165541999
+2 000 000 ways parsed... id=285905198
+3 000 000 ways parsed... id=417522515
+4 000 000 ways parsed... id=609814572
+5 000 000 ways parsed... id=744877616
+6 000 000 ways parsed... id=971429736
+7 000 000 ways parsed... id=1119277274
+8 000 000 ways parsed... id=1283072221
+Found 5 790 115 of 5 790 122 needed nodes.
+  JVM Memory Info: Current 3720MB (1989MB used, 1731MB free) Max 7282MB
+Calculating tiles for problem relations...
+Warning: rel 54219 touches 33 tiles.
+Warning: rel 54368 touches 33 tiles.
+Warning: Incomplete multipolygon relation 269948 (Blåfjella-Skjækerfjella / Låarte-Skæhkere nasjonalpark): using bbox of unclosed polygon to calc tiles, ways: [41221011]
+Warning: Incomplete multipolygon relation 269948 (Blåfjella-Skjækerfjella / Låarte-Skæhkere nasjonalpark): using bbox of unclosed polygon to calc tiles, ways: [994952600, 994952599]
+Warning: Incomplete multipolygon relation 403011 (Tornio): using bbox of unclosed polygon to calc tiles, ways: [49801347, 52977302, 228681707, 49713957, 49842333, 49842341, 49842345, 637726295, 637726296, 677480737, 677480736, 49713964, 187691532, 49715132]
+Warning: Incomplete multipolygon relation 404594 (Færder): using bbox of unclosed polygon to calc tiles, ways: [49863813, 519146695]
+Warning: Incomplete multipolygon relation 406073 (Marker): using bbox of unclosed polygon to calc tiles, ways: [43868642, 56185759, 50033389, 708774784, 1197237373, 1197237374, 315776907, 50033390]
+Warning: Incomplete multipolygon relation 406074 (Aremark): using bbox of unclosed polygon to calc tiles, ways: [50033388, 748923360, 980608035, 748923362, 980608037, 748923359, 43867436, 43869022, 50033390]
+Warning: Incomplete multipolygon relation 406075 (Halden): using bbox of unclosed polygon to calc tiles, ways: [50032223, 50033371, 44490317, 642330139, 642330134, 642330135, 642330133, 642330136, 642330137, 642330138, 178939188, 60148322, 4948026, 27565809, 748923361, 50033388]
+Warning: Incomplete multipolygon relation 407202 (Røyrvik): using bbox of unclosed polygon to calc tiles, ways: [50094905, 50158927, 50158923]
+Warning: Incomplete multipolygon relation 407278 (Verdal): using bbox of unclosed polygon to calc tiles, ways: [50164139, 50164138, 50163413]
+Warning: Incomplete multipolygon relation 407751 (Storfjord): using bbox of unclosed polygon to calc tiles, ways: [40695641, 55740711, 50220499, 50224887]
+Warning: Incomplete multipolygon relation 408200 (Hattfjelldal): using bbox of unclosed polygon to calc tiles, ways: [61232104, 50282131, 28533935, 50094905]
+Warning: Incomplete multipolygon relation 408204 (Fauske - Fuossko): using bbox of unclosed polygon to calc tiles, ways: [50282174, 110226806, 110226787, 369930076, 110250630, 50282176]
+Warning: Incomplete multipolygon relation 408205 (Sørfold): using bbox of unclosed polygon to calc tiles, ways: [110226944, 110226945, 110226940, 50282176, 50282208]
+Warning: Incomplete multipolygon relation 412436 (Hedmark): using bbox of unclosed polygon to calc tiles, ways: [50081156, 28678613, 50709191, 61232111, 700814534, 700814533, 43566292, 50584603, 708774787, 708774788, 1197237376, 1197237375, 50584605, 708774785, 510306256, 708774786, 50709210, 510306263, 43566338, 510306288, 50709207, 510306290, 61232109, 708774789, 708774791, 708774790, 61232108, 510306292, 322111028, 56185769, 50035662, 50035671]
+Warning: Incomplete multipolygon relation 412533 (Eidskog): using bbox of unclosed polygon to calc tiles, ways: [50035671, 50035662, 56185769, 523822646]
+Warning: Incomplete multipolygon relation 412534 (Kongsvinger): using bbox of unclosed polygon to calc tiles, ways: [523822646, 322111028, 510306292, 61232108, 708774790, 708774791, 708774789, 61232109, 523822614]
+Warning: Incomplete multipolygon relation 412542 (Engerdal): using bbox of unclosed polygon to calc tiles, ways: [50081156, 28678613, 50709191, 50709211]
+Warning: Incomplete multipolygon relation 1160532 (Perämeren kansallispuisto): using bbox of closed polygon to calc tiles, ways: [4613326]
+Warning: Incomplete multipolygon relation 1160532 (Perämeren kansallispuisto): using bbox of closed polygon to calc tiles, ways: [677480738, 677480736, 677480735]
+Warning: Incomplete multipolygon relation 1160532 (Perämeren kansallispuisto): using bbox of closed polygon to calc tiles, ways: [526092349]
+Warning: Incomplete multipolygon relation 1724359 (Lappi): using bbox of unclosed polygon to calc tiles, ways: [40695641, 222479346, 211202717, 43032515, 912394079, 42977097, 42977357, 60541488, 170349467, 42963910, 187691535, 187691539, 889524254, 60541017, 42977559, 187691533, 49711713, 60541019, 49711714, 49801347, 52977302, 228681707, 49713957, 49842333, 49842341, 49842345, 637726295, 637726296, 677480737, 677480736, 49713964, 1092471859, 49713963, 187691546]
+Warning: Incomplete multipolygon relation 1724976 (Enontekiö): using bbox of unclosed polygon to calc tiles, ways: [170349470, 170349467, 60541488, 42977357, 42977097, 912394079, 43032515, 211202717, 222479346, 40695641]
+Warning: Incomplete multipolygon relation 2297664 (Jomala): using bbox of unclosed polygon to calc tiles, ways: [1106540956, 191903335, 191903345]
+Warning: Incomplete multipolygon relation 2375170 (Åland): using bbox of unclosed polygon to calc tiles, ways: [22976097, 45670458, 191903335, 191883714, 191883712, 38605175, 1092458602, 1092458601, 722582744, 722582745, 722582746, 49204460, 731902151, 1092471860, 191883717]
+Warning: Incomplete multipolygon relation 2375171 (Landskapet Åland): using bbox of unclosed polygon to calc tiles, ways: [22976097, 45670458, 191903335, 191883714, 191883712, 38605175, 1092458602, 1092458601, 722582744, 722582745, 722582746, 49204460, 731902151, 1092471860, 191883717]
+Warning: Incomplete multipolygon relation 2527259 (Kemi): using bbox of unclosed polygon to calc tiles, ways: [187691546, 49713963, 1092471859, 187691532]
+Warning: Incomplete multipolygon relation 2527260 (Kolari): using bbox of unclosed polygon to calc tiles, ways: [187691527, 889524254, 187691539, 408295961]
+Warning: Incomplete multipolygon relation 2527261 (Pello): using bbox of unclosed polygon to calc tiles, ways: [187691548, 187691533, 42977559, 60541017, 187691527]
+Warning: Incomplete multipolygon relation 2527262 (Ylitornio): using bbox of unclosed polygon to calc tiles, ways: [49715132, 49711714, 60541019, 49711713, 187691548]
+Warning: Incomplete multipolygon relation 2541341 (Lappi): using bbox of unclosed polygon to calc tiles, ways: [40695641, 222479346, 211202717, 43032515, 912394079, 42977097, 42977357, 60541488, 170349467, 42963910, 187691535, 187691539, 889524254, 60541017, 42977559, 187691533, 49711713, 60541019, 49711714, 49801347, 52977302, 228681707, 49713957, 49842333, 49842341, 49842345, 637726295, 637726296, 677480737, 677480736, 49713964, 1092471859, 49713963, 187691546]
+Warning: Incomplete multipolygon relation 2587236 (Regional State Agency Åland): using bbox of unclosed polygon to calc tiles, ways: [22976097, 45670458, 191903335, 191883714, 191883712, 38605175, 1092458602, 1092458601, 722582744, 722582745, 722582746, 49204460, 731902151, 1092471860, 191883717]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739421]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739420]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739419]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739418]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739417]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1285739416]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1175598815]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of closed polygon to calc tiles, ways: [1092471860, 731902151, 49204460, 722582746, 722582745, 722582744, 1092458601, 1092458602, 38605175, 191903358, 706640601, 706640602]
+Warning: Incomplete multipolygon relation 2587483 (Hammarland): using bbox of unclosed polygon to calc tiles, ways: [1106540956, 191883714, 1106583853]
+Warning: Incomplete multipolygon relation 2587484 (Eckerö): using bbox of unclosed polygon to calc tiles, ways: [191883712, 1106583853, 191903358, 706640601, 706640602, 191883717]
+Warning: Incomplete multipolygon relation 6436295 (Torniolaakson seutukunta): using bbox of unclosed polygon to calc tiles, ways: [60541017, 42977559, 187691533, 49711713, 60541019, 49711714, 49715132, 187691527]
+Warning: Incomplete multipolygon relation 6437791 (Ålands skärgård): using bbox of unclosed polygon to calc tiles, ways: [22976097, 816146109]
+Warning: Incomplete multipolygon relation 6440743 (Ålands landsbygd): using bbox of unclosed polygon to calc tiles, ways: [191883717, 1092471860, 731902151, 49204460, 722582746, 722582745, 722582744, 1092458601, 1092458602, 38605175, 191883712, 191883714, 191903335, 45670458, 816146109]
+Warning: Incomplete multipolygon relation 6440834 (Kemi-Tornion seutukunta): using bbox of unclosed polygon to calc tiles, ways: [49713963, 1092471859, 49713964, 677480736, 677480737, 637726296, 637726295, 49842345, 49842341, 49842333, 49713957, 228681707, 52977302, 49801347, 49715132, 187691546]
+Warning: Incomplete multipolygon relation 6442967 (Tunturi-Lapin seutukunta): using bbox of unclosed polygon to calc tiles, ways: [170349467, 60541488, 42963910, 187691535, 187691539, 42977357, 889524254, 187691527, 42977097, 912394079, 43032515, 211202717, 222479346, 40695641]
+Warning: Incomplete multipolygon relation 9048320 (Skagerrak): using bbox of unclosed polygon to calc tiles, ways: [775645337, 649023136, 1151401029]
+Warning: Incomplete multipolygon relation 9048320 (Skagerrak): using bbox of closed polygon to calc tiles, ways: [396799631]
+Warning: Incomplete multipolygon relation 9048320 (Skagerrak): using bbox of closed polygon to calc tiles, ways: [202971166]
+Warning: Incomplete multipolygon relation 9048320 (Skagerrak): using bbox of closed polygon to calc tiles, ways: [201034883]
+Warning: Incomplete multipolygon relation 10155507 (Troms og Finnmark): using bbox of unclosed polygon to calc tiles, ways: [50220491, 50220492, 106934494, 106934493, 110019568, 50220496, 50220499, 55740711, 40695641]
+Warning: Incomplete multipolygon relation 10155539 (Viken): using bbox of unclosed polygon to calc tiles, ways: [765228629, 519329174, 519329175, 519329173, 765228628, 28567543, 765228627, 50032223, 44490317, 642330139, 642330134, 642330135, 642330133, 642330136, 642330137, 642330138, 178939188, 60148322, 4948026, 27565809, 748923361, 748923360, 980608035, 748923362, 980608037, 748923359, 43867436, 43869022, 315776907, 1197237374, 1197237373, 708774784, 43868642, 56185759, 50032277, 61232107, 50032266, 50035671, 765228631, 28841804, 1091558428, 765228655, 519146695]
+Warning: Incomplete multipolygon relation 10487008 (Vestfold og Telemark): using bbox of unclosed polygon to calc tiles, ways: [519146695, 49863813]
+Warning: Incomplete multipolygon relation 13209579 (Nord-Trøndelag): using bbox of unclosed polygon to calc tiles, ways: [50094905, 50158927, 61232113, 614208128, 61232102, 50160481, 50163412, 614053920, 50164138, 50083147, 50083155]
+Warning: Incomplete multipolygon relation 13339089 (Børgefjell / Byrkije nasjonalpark): using bbox of unclosed polygon to calc tiles, ways: [993682931]
+Warning: Incomplete multipolygon relation 13955915 (Norges økonomiske sone): using bbox of unclosed polygon to calc tiles, ways: [49863813, 548452498]
+Warning: Incomplete multipolygon relation 14540303 (Danmarks eksklusive økonomiske zone): using bbox of unclosed polygon to calc tiles, ways: [1091714365]
+Warning: Incomplete multipolygon relation 14540303 (Danmarks eksklusive økonomiske zone): using bbox of unclosed polygon to calc tiles, ways: [89490242, 1091714366]
+Warning: Incomplete multipolygon relation 14540303 (Danmarks eksklusive økonomiske zone): using bbox of unclosed polygon to calc tiles, ways: [1091720425, 89417432, 1091714367]
+Warning: Incomplete multipolygon relation 14553467 (Sveriges ekonomiska zon): using bbox of unclosed polygon to calc tiles, ways: [375467548, 60463445, 60455045, 60463460, 60463449, 61274555, 132619877, 60463473, 97945761, 61274529, 97880250, 51204293, 98112872, 98112875, 98114537, 61274545, 98521955, 61274556, 98364608, 51204240, 60463455, 61274548, 1092625007]
+Warning: Incomplete multipolygon relation 14553467 (Sveriges ekonomiska zon): using bbox of unclosed polygon to calc tiles, ways: [1091706603, 48922163, 71417319, 71417272, 71417283, 48927549, 71377762, 222547095, 222547094, 60465664, 853613131, 853613136, 743710554, 60463464, 282058445, 61750307, 60455040, 61750299, 61750306, 60463450, 396748429, 395489252, 307106988, 395485621, 48927694, 1092621628, 1091714366]
+Warning: Incomplete multipolygon relation 14553467 (Sveriges ekonomiska zon): using bbox of unclosed polygon to calc tiles, ways: [1091714365]
+Warning: Incomplete multipolygon relation 14553467 (Sveriges ekonomiska zon): using bbox of unclosed polygon to calc tiles, ways: [691235456, 71831834, 71831828, 71831812, 48927259, 48921090, 71831831, 48923894, 743678782, 71417277, 71417297, 71417291, 743645440, 48921468, 1091714367, 765228655, 548452498]
+Warning: rel 14553467 touches 44 tiles.
+Warning: Incomplete multipolygon relation 16463783 (Skandinavia): using bbox of closed polygon to calc tiles, ways: [48927175]
+Warning: Incomplete multipolygon relation 16463783 (Skandinavia): using bbox of unclosed polygon to calc tiles, ways: [40695641, 222479346, 211202717, 43032515, 912394079, 42977097, 42977357, 60541488, 170349467, 42963910, 187691535, 187691539, 889524254, 60541017, 42977559, 187691533, 49711713, 60541019, 49711714, 49801347, 52977302, 228681707, 49713957, 49842333, 49842341, 49842345, 637726295, 637726296, 677480737, 677480736, 49713964, 1092471859, 49713963, 51203958, 1092634081, 60651790, 61737653, 1237398715, 61737656, 60463441, 61274546, 51204070, 137751390, 137751329, 51204213, 42938930, 61274548, 60463455, 51204240, 98364608, 61274556, 98521955, 61274545, 98114537, 98112875, 98112872, 51204293, 97880250, 61274529, 97945761, 60463473, 132619877, 61274555, 60463449, 60463460, 60455045, 60463445, 375467548, 191883717, 1092471860, 731902151, 49204460, 722582746, 722582745, 722582744, 1092458601, 1092458602, 38605175, 191883712, 191883714, 191903335, 45670458, 1092634082, 48927694, 395485621, 307106988, 395489252, 396748429, 60463450, 61750306, 61750299, 60455040, 61750307, 282058445, 60463464, 743710554, 853613136, 853613131, 60465664, 222547094, 222547095, 71377762, 48927549, 71417283, 71417272, 71417319, 48922163, 1091706603, 89490242]
+Warning: Incomplete multipolygon relation 16463783 (Skandinavia): using bbox of unclosed polygon to calc tiles, ways: [89417432, 1091720425, 48921468, 743645440, 71417291, 71417297, 71417277, 743678782, 48923894, 71831831, 48921090, 48927259, 71831812, 71831828, 71831834, 691235456, 765228655, 49863813]
+Warning: rel 16463783 touches 61 tiles.
+Warning: Incomplete multipolygon relation 16464296 (Norden / Pohjoismaat / Norðurlönd): using bbox of closed polygon to calc tiles, ways: [48927175]
+Warning: Incomplete multipolygon relation 16464296 (Norden / Pohjoismaat / Norðurlönd): using bbox of unclosed polygon to calc tiles, ways: [89490242, 1091706603, 48922163, 71417319, 71417272, 71417283, 48927549, 71377762, 222547095, 222547094, 60465664, 853613131, 853613136, 743710554, 60463464, 282058445, 61750307, 60455040, 61750299, 61750306, 60463450, 396748429, 395489252, 307106988, 395485621, 48927694, 1092634082, 22976097]
+Warning: Incomplete multipolygon relation 16464296 (Norden / Pohjoismaat / Norðurlönd): using bbox of unclosed polygon to calc tiles, ways: [49863813, 765228655, 691235456, 71831834, 71831828, 71831812, 48927259, 48921090, 71831831, 48923894, 743678782, 71417277, 71417297, 71417291, 743645440, 48921468, 1091720425, 89417432]
+Warning: rel 16464296 touches 37 tiles.
+Warning: Incomplete multipolygon relation 16819467 (UTC+01:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [22976097, 45670458, 191903335, 191883714, 191883712, 38605175, 1092458602, 1092458601, 722582744, 722582745, 722582746, 49204460, 731902151, 1092471860, 191883717]
+Warning: Incomplete multipolygon relation 16819467 (UTC+01:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [176763805, 42938930, 51204213, 137751329, 137751390, 51204195, 42938931]
+Warning: Incomplete multipolygon relation 16819467 (UTC+01:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [1237398716, 61737653, 60651790, 1092634081, 51203958, 49713963, 1092471859, 49713964, 677480736, 677480737, 637726296, 637726295, 49842345, 49842341, 49842333, 49713957, 228681707, 52977302, 49801347, 49711714, 60541019, 49711713, 187691533, 42977559, 60541017, 889524254, 187691539, 187691535, 42963910, 170349467, 60541488, 42977357, 42977097, 912394079, 43032515, 211202717, 222479346, 40695641]
+Warning: Incomplete multipolygon relation 16819468 (UTC+02:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [40695641, 222479346, 211202717, 43032515, 912394079, 42977097, 42977357, 60541488, 170349467, 42963910, 187691535, 187691539, 889524254, 60541017, 42977559, 187691533, 49711713, 60541019, 49711714, 49801347, 52977302, 228681707, 49713957, 49842333, 49842341, 49842345, 637726295, 637726296, 677480737, 677480736, 49713964, 1092471859, 49713963, 51203958, 1092634081, 60651790, 61737653, 1237398716]
+Warning: Incomplete multipolygon relation 16819468 (UTC+02:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [42938931, 51204195, 137751390, 137751329, 51204213, 42938930, 176763805]
+Warning: Incomplete multipolygon relation 16819468 (UTC+02:00 standard time): using bbox of unclosed polygon to calc tiles, ways: [191883717, 1092471860, 731902151, 49204460, 722582746, 722582745, 722582744, 1092458601, 1092458602, 38605175, 191883712, 191883714, 191903335, 45670458, 22976097]
+Warning: rel 17514001 touches 41 tiles.
+Warning: rel 17514046 touches 32 tiles.
+Warning: Incomplete multipolygon relation 17518360 (Nord-Norge): using bbox of unclosed polygon to calc tiles, ways: [61232104, 28533935, 50094905, 44447945, 50282167, 44449667, 1289000626, 60476395, 9502695, 50284612, 110226942, 110226806, 110226787, 369930076, 110250630, 110226940, 110226945, 110226944, 156976775, 110199875, 110199874, 110199873, 733803486, 110199876, 40690738, 60541489, 50220492, 106934494, 106934493, 110019568, 50220496, 50220499, 55740711, 40695641]
+Warning: Incomplete multipolygon relation 17518378 (Agder og Sør-Østlandet): using bbox of unclosed polygon to calc tiles, ways: [519146695, 49863813]
+Warning: Incomplete multipolygon relation 17518400 (Oslo og Viken): using bbox of unclosed polygon to calc tiles, ways: [519146695, 765228655, 1091558428, 28841804, 765228631, 765228629, 519329174, 519329175, 519329173, 765228628, 28567543, 765228627, 50032223, 44490317, 642330139, 642330134, 642330135, 642330133, 642330136, 642330137, 642330138, 178939188, 60148322, 4948026, 27565809, 748923361, 748923360, 980608035, 748923362, 980608037, 748923359, 43867436, 43869022, 315776907, 1197237374, 1197237373, 708774784, 43868642, 56185759, 50032277, 61232107, 50032266, 50035671]
+Warning: Incomplete multipolygon relation 17518688 (Pohjois- ja Itä-Suomi): using bbox of unclosed polygon to calc tiles, ways: [187691546, 49713963, 1092471859, 49713964, 677480736, 677480737, 637726296, 637726295, 49842345, 49842341, 49842333, 49713957, 228681707, 52977302, 49801347, 49711714, 60541019, 49711713, 187691533, 42977559, 60541017, 889524254, 187691539, 187691535, 42963910, 170349467, 60541488, 42977357, 42977097, 912394079, 43032515, 211202717, 222479346, 40695641]
+Stats for MultiTileProcessor pass 3
+  SparseBitSet neededWays contains now 145 162 Ids.
+  Number of stored tile combinations in multiTileDictionary: 715
+Status: Making sure that needed way nodes of relations are written to the correct tiles...
+Multi-tile analyses phase 3 took 23282 ms
+-----------------------------------
+Executing multi-tile analyses phase 4
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+1 000 000 ways parsed... id=165541999
+2 000 000 ways parsed... id=285905198
+3 000 000 ways parsed... id=417522515
+4 000 000 ways parsed... id=609814572
+5 000 000 ways parsed... id=744877616
+6 000 000 ways parsed... id=971429736
+7 000 000 ways parsed... id=1119277274
+8 000 000 ways parsed... id=1283072221
+Stats for MultiTileProcessor pass 4
+  SparseBitSet neededWays contains now 145 162 Ids.
+  Number of stored tile combinations in multiTileDictionary: 755
+  nodeWriterMap contains 5 790 115 pairs.
+  wayWriterMap contains 138 930 pairs.
+  relWriterMap contains 4 372 pairs.
+Status: Finished processing problem lists.
+Multi-tile analyses phase 4 took 7922 ms
+-----------------------------------
+Writing results of MultiTileAnalyser to temp files ...
+Wrote 5790115 node pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node2151889220814254281.tmp
+Wrote 138930 way pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7795602345079518806.tmp
+Wrote 4372 rel pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel1015063316393417127.tmp
+Writing temp files took 442 ms
+Distributing data Fri Aug 16 16:49:16 CEST 2024
+Processing 61 areas in a single pass
+coord Map: uses SparseLong2IntMap
+way Map: uses SparseLong2IntMap
+Starting distribution pass 1 of 1, processing 61 areas (63210001 to 63210061)
+Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
+Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
+10 000 000 nodes parsed... id=1568539454
+20 000 000 nodes parsed... id=2638980216
+30 000 000 nodes parsed... id=3824684319
+40 000 000 nodes parsed... id=5259876485
+50 000 000 nodes parsed... id=6501607995
+60 000 000 nodes parsed... id=7354007461
+70 000 000 nodes parsed... id=8833318163
+80 000 000 nodes parsed... id=10000474863
+90 000 000 nodes parsed... id=11585245753
+Writing ways Fri Aug 16 16:49:38 CEST 2024
+1 000 000 ways parsed... id=165541999
+2 000 000 ways parsed... id=285905198
+3 000 000 ways parsed... id=417522515
+4 000 000 ways parsed... id=609814572
+5 000 000 ways parsed... id=744877616
+Elapsed time: 2m 0s   Memory: Current 3732MB (2414MB used, 1318MB free) Max 7282MB
+6 000 000 ways parsed... id=971429736
+7 000 000 ways parsed... id=1119277274
+8 000 000 ways parsed... id=1283072221
+Writing relations Fri Aug 16 16:49:49 CEST 2024
+100 000 relations parsed... id=10218707
+200 000 relations parsed... id=16094332
+coord Map: 94 461 291 stored long/int pairs require ca. 8 bytes per pair. 3 407 394 chunks are used, the avg. number of values in one 64-chunk is 27.
+coord Map details: ~760 MB, including 91 array(s) with 8 MB
+
+way Map: 8 158 574 stored long/int pairs require ca. 11 bytes per pair. 888 882 chunks are used, the avg. number of values in one 64-chunk is 9.
+way Map details: ~88 MB, including 10 array(s) with 8 MB
+
+  JVM Memory Info: Current 3750MB (1173MB used, 2577MB free) Max 7282MB
+Full Node tests:  12 669 388
+Quick Node tests: 88 226 979
+Thread worker-0 has finished
+Thread worker-3 has finished
+Thread worker-4 has finished
+Thread worker-8 has finished
+Thread worker-1 has finished
+Thread worker-10 has finished
+Thread worker-9 has finished
+Thread worker-5 has finished
+Thread worker-6 has finished
+Thread worker-2 has finished
+Thread worker-7 has finished
+Distribution pass(es) took 34298 ms
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node2151889220814254281.tmp was deleted
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7795602345079518806.tmp was deleted
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel1015063316393417127.tmp was deleted
+Time finished: Fri Aug 16 16:49:50 CEST 2024
+Total time taken: 2 minutes 3 seconds

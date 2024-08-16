@@ -163,14 +163,9 @@ highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
 
 highway=service & service=parking_aisle [0x07 road_class=0 road_speed=1 resolution 24]
 highway=service & (service=alley|service=driveway) [0x07 road_class=0 road_speed=0 resolution 23]
-#peho-changes from 0x0a->0x07
 highway=service [0x0f resolution 22-22 continue] 
 highway=service [0x07 road_class=0 road_speed=2 resolution 23]
 
-#peho-changes from 0x0a->0x10e04 & #commented away
-#highway=cycleway [0x10e04 resolution 22-22 continue] 
-
-#peho-changes from 0x07->0x10e04
 highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23] 
 
 #peho-changes #commented out
@@ -178,13 +173,9 @@ highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23]
 #peho-changes #commented out
 #highway=footway|highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
 
-#peho-changes added 
 highway=footway [0x10e01 road_class=0 road_speed=0 resolution 23] 
-#peho-changes added  
 highway=path & width < 1 [0x17 road_class=0 road_speed=0 resolution 24] 
-#peho-changes added  
 highway=path & tracktype~'grade[3-6]' [0x17 road_class=0 road_speed=0 resolution 24] 
-#peho-changes added 
 highway=path [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
 highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
 highway=steps [0x13 road_class=0 road_speed=0 resolution 23]
