@@ -58,9 +58,9 @@ highway=motorway { name '${ref|highway-symbol:hbox} ${name}' | '${ref|highway-sy
          'Exit ${mkgmap:exit_hint_ref}'
        }
               
-highway=trunk {name '${ref|highway-symbol:hbox} ${name}' | '${ref|highway-symbol:hbox}' | '${name}'; addlabel '${name} (${ref})' }
-highway=primary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:box}' | '${name}'; addlabel '${name} (${ref})' }
-highway=secondary | highway=tertiary {name '${ref|highway-symbol:oval} ${name}' | '${ref|highway-symbol:oval}' | '${name}'; addlabel '${name} (${ref})' }
+# highway=trunk {name '${ref|highway-symbol:hbox} ${name}' | '${ref|highway-symbol:hbox}' | '${name}'; addlabel '${name} (${ref})' }
+# highway=primary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:box}' | '${name}'; addlabel '${name} (${ref})' }
+# highway=secondary | highway=tertiary {name '${ref|highway-symbol:oval} ${name}' | '${ref|highway-symbol:oval}' | '${name}'; addlabel '${name} (${ref})' }
 # highway=* {name '${name}' | '${ref}' }
 
 # Flag unpaved roads.
@@ -141,21 +141,24 @@ highway=secondary [0x04 road_class=2 road_speed=4 resolution 21]
 highway=secondary_link [0x08 road_class=2 road_speed=1 resolution 22]
 
 highway=tertiary {delete name} [0x0e resolution 19-21 continue]
-highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22]
+highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
+highway=tertiary {name '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
 highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
 
 highway=minor [0x06 road_class=1 road_speed=3 resolution 21]
 
-highway=unclassified [0x0f resolution 20-20 continue]
-highway=unclassified [0x0e resolution 21-21 continue]
-highway=unclassified [0x05 road_class=0 road_speed=3 resolution 22]
+highway=unclassified {delete name} [0x0f resolution 20-20 continue]
+highway=unclassified {delete name} [0x0e resolution 21-21 continue]
+highway=unclassified {name '${name}' | '${ref}' } [0x05 road_class=0 road_speed=3 resolution 22]
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
 # To allow bicycling, add 'add bicycle=yes'
-highway=residential | (highway=pedestrian & area!=yes) | highway=living_street {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
-highway=pedestrian & area!=yes [0x0d road_class=0 road_speed=0 resolution 22]
-highway=living_street [0x06 road_class=0 road_speed=1 resolution 22]
+highway=pedestrian & area!=yes {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
+highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=0 resolution 23]
+highway=living_street {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
+highway=living_street {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=1 resolution 23]
+highway=residential {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
 highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
 highway=residential {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
@@ -163,8 +166,8 @@ highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
 
 highway=service & service=parking_aisle [0x07 road_class=0 road_speed=1 resolution 24]
 highway=service & (service=alley|service=driveway) [0x07 road_class=0 road_speed=0 resolution 23]
-highway=service [0x0f resolution 22-22 continue] 
-highway=service [0x07 road_class=0 road_speed=2 resolution 23]
+highway=service {delete name} [0x0f resolution 22-22 continue] 
+highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 23]
 
 highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23] 
 
@@ -176,8 +179,9 @@ highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23]
 highway=footway [0x10e01 road_class=0 road_speed=0 resolution 23] 
 highway=path & width < 1 [0x17 road_class=0 road_speed=0 resolution 24] 
 highway=path & tracktype~'grade[3-6]' [0x17 road_class=0 road_speed=0 resolution 24] 
-highway=path [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
-highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
+highway=path {delete name} [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
+highway=path {delete name} [0x16 road_class=0 road_speed=0 resolution 23 continue] 
+highway=path {name '${name}' | '${ref}' } [0x16 road_class=0 road_speed=0 resolution 24] 
 highway=steps [0x13 road_class=0 road_speed=0 resolution 23]
 
 #commented away
