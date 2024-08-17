@@ -140,8 +140,8 @@ highway=secondary [0x04 road_class=2 road_speed=4 resolution 21]
 
 highway=secondary_link [0x08 road_class=2 road_speed=1 resolution 22]
 
-highway=tertiary [0x0e resolution 19-21 continue]
-highway=tertiary [0x05 road_class=1 road_speed=4 resolution 22]
+highway=tertiary {delete name} [0x0e resolution 19-21 continue]
+highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22]
 
 highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
 
@@ -157,7 +157,7 @@ highway=residential | (highway=pedestrian & area!=yes) | highway=living_street {
 highway=pedestrian & area!=yes [0x0d road_class=0 road_speed=0 resolution 22]
 highway=living_street [0x06 road_class=0 road_speed=1 resolution 22]
 highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
-highway=residential [0x06 road_class=0 road_speed=2 resolution 24]
+highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 24]
 highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
 highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
 
