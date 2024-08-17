@@ -157,7 +157,7 @@ highway=residential | (highway=pedestrian & area!=yes) | highway=living_street {
 highway=pedestrian & area!=yes [0x0d road_class=0 road_speed=0 resolution 22]
 highway=living_street [0x06 road_class=0 road_speed=1 resolution 22]
 highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
-highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 24]
+highway=residential {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
 highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
 
