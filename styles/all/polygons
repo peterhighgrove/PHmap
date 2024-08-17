@@ -47,7 +47,7 @@ leisure=nature_reserve [0x0f00 resolution 19]
 leisure=park [0x17 resolution 20]
 #peho-changed 19-> 41
 leisure=pitch {delete name} [0x41 resolution 22 continue]
-leisure=pitch {name '${name}'-'${sport}' | '${name}' | '${sport}'} [0x41 resolution 24]
+leisure=pitch {name '${name}-${sport}' | '${name}' | '${sport}'} [0x41 resolution 24]
 #leisure=playground [0x17 resolution 22]
 leisure=recreation_ground [0x19 resolution 21]
 #peho-changed del #comment
