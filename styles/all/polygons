@@ -14,7 +14,7 @@ leisure=* & sport=* & name!=* { add name='${sport}' }
 include 'inc/name';
 
 # buildings tag should be FIRST
-building=* & area!=no [0x13 resolution 24 continue]
+building=* & area!=no [0x13 resolution 23 continue]
 
 aeroway=airport [0x07 resolution 20]
 aeroway=aerodrome [0x07 resolution 20]
@@ -46,7 +46,8 @@ leisure=ice_rink [0x19 resolution 22]
 leisure=nature_reserve [0x0f00 resolution 19]
 leisure=park [0x17 resolution 20]
 #peho-changed 19-> 41
-leisure=pitch [0x41 resolution 22]
+leisure=pitch {delete name} [0x41 resolution 22 continue]
+leisure=pitch {name '${name}'-'${sport}' | '${name}' | '${sport}'} [0x41 resolution 24]
 #leisure=playground [0x17 resolution 22]
 leisure=recreation_ground [0x19 resolution 21]
 #peho-changed del #comment
@@ -56,17 +57,20 @@ leisure=track & area=yes [0x10f00 resolution 21]
 leisure=water_park [0x09 resolution 23]
 
 natural=beach | natural=sand [0x55 resolution 21]
-natural=bare_rock [0x16 resolution 21]
+natural=bare_rock [0x16 resolution 20]
 natural=heath | natural=grassland [0x4f resolution 21]
 natural=scrub [0x4f resolution 20]
 natural=scree [0x11002 resolution 20]
 natural=cape [0x53 resolution 23]
 
-(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous)[0x38 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous)[0x39 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) [0x5000 resolution 15]
-landuse=meadow [0x17 resolution 19]
-landuse=grass | landuse=greenfield [0x17 resolution 23]
+(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {delete name} [0x38 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {name '${name}' | '${ref}' } [0x38 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {delete name} [0x39 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {name '${name}' | '${ref}' } [0x39 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) {delete name} [0x5000 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) {name '${name}' | '${ref}' } [0x5000 resolution 15]
+landuse=meadow [0x17 resolution 20]
+landuse=grass | landuse=greenfield [0x17 resolution 20]
 landuse=vineyard [0x4e resolution 20]
 landuse=allotments [0x24 resolution 21]
 landuse=farm [0x24 resolution 20]
