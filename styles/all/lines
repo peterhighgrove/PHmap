@@ -169,14 +169,16 @@ highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed
 highway=service {delete name} [0x0f road_class=0 road_speed=2 resolution 21-22 continue] 
 highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 23]
 
-highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 21] 
 
 #peho-changes #commented out
 #(highway=footway|highway=path) & tracktype~'grade[1-2]' {add access = no; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22] 
 #peho-changes #commented out
 #highway=footway|highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
 
-highway=footway [0x10e01 road_class=0 road_speed=0 resolution 21] 
+highway=cycleway [0x10e03 road_class=0 road_speed=1 resolution 21-22] 
+highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23] 
+highway=footway [0x17 road_class=0 road_speed=0 resolution 21-22] 
+highway=footway [0x10e01 road_class=0 road_speed=0 resolution 23] 
 highway=path & width < 1 [0x17 road_class=0 road_speed=0 resolution 24] 
 highway=path & tracktype~'grade[3-6]' [0x17 road_class=0 road_speed=0 resolution 24] 
 highway=path {delete name} [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
