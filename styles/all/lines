@@ -201,7 +201,7 @@ highway=* & highway!=proposed & area!=yes [0x07 road_class=0 road_speed=0 resolu
 
 natural=coastline [0x15 resolution 12]
 natural=cliff [0x31 resolution 24]
-barrier=fence | fenced=yes [0x33 resolution 24]
+barrier=fence | fenced=yes [0x33 resolution 24 continue]
 natural=wood | landuse=forest [0x11002  resolution 24 continue] 
 
 route=ferry {add mkgmap:ferry=1} [0x1b road_class=3 road_speed=0 resolution 19]
