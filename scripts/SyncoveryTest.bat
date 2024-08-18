@@ -1,0 +1,1 @@
+"C:\Program Files\Syncovery\SyncoveryService.exe" /RUNX="GarminMapsToWatch" /U

@@ -138,13 +138,13 @@ highway=secondary [0x06 resolution 18-18 continue]
 highway=secondary [0x0b resolution 19-20 continue]
 highway=secondary [0x04 road_class=2 road_speed=4 resolution 21]
 
-highway=secondary_link [0x08 road_class=2 road_speed=1 resolution 22]
+highway=secondary_link {delete name} [0x08 road_class=2 road_speed=1 resolution 22]
 
 highway=tertiary {delete name} [0x0e road_class=1 road_speed=4 resolution 19-21 continue]
 highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
 highway=tertiary {name '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
-highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
+highway=tertiary_link {delete name} [0x08 road_class=1 road_speed=1 resolution 22]
 
 highway=minor [0x06 road_class=1 road_speed=3 resolution 21]
 
@@ -166,7 +166,7 @@ highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
 
 highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
 highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
-highway=service {delete name} [0x0f road_class=0 road_speed=2 resolution 21-22 continue] 
+highway=service {delete name} [0x0f road_class=0 road_speed=2 resolution 20-22 continue] 
 highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 23]
 
 
