@@ -67,7 +67,9 @@ landuse=military [0x04 resolution 19]
 landuse=quarry [0x10f01 resolution 19]
 leisure=swimming_pool [0x3d resolution 21-23 continue]
 leisure=swimming_pool [0x3c resolution 24]
-waterway=boat_yard | leasure=marina | (highway=pier & area=yes) [0x09 resolution 23]
+
+man_made=pier | (highway=pier & area=yes) [0x49 resolution 23]
+waterway=boat_yard | leasure=marina [0x09 resolution 23]
 
 leisure=garden [0x10 resolution 21]  
 leisure=golf_course [0x18 resolution 21] 
