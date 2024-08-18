@@ -16,6 +16,67 @@ include 'inc/name';
 # buildings tag should be FIRST
 building=* & area!=no [0x13 resolution 23 continue]
 
+(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {delete name} [0x38 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {name '${name}' | '${ref}' } [0x38 resolution 23]
+(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {delete name} [0x39 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {name '${name}' | '${ref}' } [0x39 resolution 23]
+(landuse=forest|landuse=wood|natural=wood) {delete name} [0x5000 resolution 15]
+(landuse=forest|landuse=wood|natural=wood) {name '${name}' | '${ref}' } [0x5000 resolution 23]
+landuse=meadow [0x17 resolution 15]
+landuse=grass | landuse=greenfield [0x17 resolution 15]
+natural=bare_rock [0x16 resolution 15]
+natural=heath | natural=grassland [0x4f resolution 15]
+natural=scrub [0x4f resolution 15]
+natural=scree [0x11002 resolution 15]
+
+natural=glacier [0x4d resolution 15]
+natural=marsh [0x51 resolution 18]
+natural=mud [0x51 resolution 18]
+natural=wetland [0x51 resolution 18]
+natural=waterfall | waterway=waterfall [0x47 resolution 21]
+natural=sea { add mkgmap:skipSizeFilter=true } [0x32 resolution 10]
+
+natural=water & area_size() >=100000 {delete name} [0x3d resolution 15-22 continue]
+natural=water & area_size() >=100000 {name '${name}' | '${ref}' } [0x3c resolution 23]
+natural=water & area_size() >=25000 {delete name} [0x3d resolution 15-22 continue]
+natural=water & area_size() >=25000 {name '${name}' | '${ref}' } [0x3c resolution 23]
+natural=water {delete name} [0x3d resolution 15-22 continue]
+natural=water {name '${name}' | '${ref}' } [0x3c resolution 23]
+
+leisure=nature_reserve [0x0f00 resolution 19]
+natural=beach | natural=sand [0x55 resolution 19]
+natural=cape [0x53 resolution 23]
+amenity=parking & access!=private & is_in(landuse,residential,any)=no [0x05 resolution 19]
+amenity=parking | parking=surface [0x05 resolution 19]
+
+#landuse=residential|landuse=industrial|landuse=commercial [0x10 resolution 19-23]
+landuse=residential|landuse=industrial|landuse=commercial [0x10 resolution 19]
+landuse=village_green [0x17 resolution 19]
+place=village [0x03 resolution 19]
+landuse=vineyard [0x4e resolution 19]
+landuse=allotments [0x24 resolution 21]
+landuse=farm [0x24 resolution 19]
+landuse=farmyard [0x24 resolution 19]
+landuse=brownfield [0x24 resolution 22]
+landuse=landfill [0x10f04 resolution 19]
+landuse=cemetery|landuse=cemetary|amenity=grave_yard [0x1a resolution 21]
+
+landuse=military [0x04 resolution 19]
+landuse=quarry [0x10f01 resolution 19]
+leisure=swimming_pool [0x3d resolution 21-23 continue]
+leisure=swimming_pool [0x3c resolution 24]
+waterway=boat_yard | leasure=marina | (highway=pier & area=yes) [0x09 resolution 23]
+
+leisure=garden [0x10 resolution 21]  
+leisure=golf_course [0x18 resolution 21] 
+leisure=park [0x17 resolution 20]
+leisure=pitch {delete name} [0x41 resolution 22 continue]
+leisure=pitch {name '${name}-${sport}' | '${name}' | '${sport}'} [0x41 resolution 24]
+leisure=recreation_ground [0x19 resolution 21]
+leisure=sports_center | leisure=sports_centre [0x19 resolution 20]
+leisure=stadium [0x19 resolution 20]
+leisure=track & area=yes [0x10f00 resolution 21]  
+
 aeroway=airport [0x07 resolution 20]
 aeroway=aerodrome [0x07 resolution 20]
 aeroway=helipad [0x07 resolution 22]
@@ -24,68 +85,19 @@ amenity=kindergarten [0x0a resolution 24]
 amenity=cafe | amenity=fast_food | amenity=restaurant | amenity=food_court [0x08 resolution 24]
 amenity=college [0x0a resolution 24]
 parking=underground | parking=multi-storey [0x05 resolution 24]
-amenity=parking & access!=private & is_in(landuse,residential,any)=no [0x05 resolution 19]
-amenity=parking | parking=surface [0x05 resolution 24]
 amenity=prison [0x04 resolution 24]
 amenity=school [0x0a resolution 24]
 # amenity=supermarket is superceded by shop=supermarket or landuse=retail
 amenity=supermarket [0x08 resolution 22]
 amenity=university [0x0a resolution 24 continue]
-
 (healthcare=hospital | amenity=hospital) & (building!=*) [0x0b resolution 24]
 (healthcare=hospital | amenity=hospital) & (building=*) [0x0b resolution 24 continue]
-healthcare=* | amenity=dentist | amenity=doctors | amenity=nursing_home
-[0x0b resolution 24]
+healthcare=* | amenity=dentist | amenity=doctors | amenity=nursing_home [0x0b resolution 24]
 
 #leisure=common [0x17 resolution 21]
-#peho-changed 07->10
-leisure=garden [0x10 resolution 21]  
-#peho-changed del #comment
-leisure=golf_course [0x18 resolution 21] 
-leisure=ice_rink [0x19 resolution 22]
-leisure=nature_reserve [0x0f00 resolution 19]
-leisure=park [0x17 resolution 20]
-#peho-changed 19-> 41
-leisure=pitch {delete name} [0x41 resolution 22 continue]
-leisure=pitch {name '${name}-${sport}' | '${name}' | '${sport}'} [0x41 resolution 24]
 #leisure=playground [0x17 resolution 22]
-leisure=recreation_ground [0x19 resolution 21]
-#peho-changed del #comment
-leisure=sports_center | leisure=sports_centre [0x19 resolution 20]
-leisure=stadium [0x19 resolution 20]
-leisure=track & area=yes [0x10f00 resolution 21]  
+leisure=ice_rink [0x19 resolution 22]
 leisure=water_park [0x09 resolution 23]
-
-natural=beach | natural=sand [0x55 resolution 21]
-natural=bare_rock [0x16 resolution 20]
-natural=heath | natural=grassland [0x4f resolution 21]
-natural=scrub [0x4f resolution 20]
-natural=scree [0x11002 resolution 20]
-natural=cape [0x53 resolution 23]
-
-(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {delete name} [0x38 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {name '${name}' | '${ref}' } [0x38 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {delete name} [0x39 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) & (wood=deciduous) {name '${name}' | '${ref}' } [0x39 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) {delete name} [0x5000 resolution 15]
-(landuse=forest|landuse=wood|natural=wood) {name '${name}' | '${ref}' } [0x5000 resolution 15]
-landuse=meadow [0x17 resolution 20]
-landuse=grass | landuse=greenfield [0x17 resolution 20]
-landuse=vineyard [0x4e resolution 20]
-landuse=allotments [0x24 resolution 21]
-landuse=farm [0x24 resolution 20]
-landuse=farmyard [0x24 resolution 22]
-landuse=brownfield [0x24 resolution 22]
-landuse=landfill [0x10f04 resolution 22]
-
-#landuse=residential|landuse=industrial|landuse=commercial [0x10 resolution 19-23]
-landuse=residential|landuse=industrial|landuse=commercial [0x10 resolution 19]
-landuse=cemetery|landuse=cemetary|amenity=grave_yard [0x1a resolution 21]
-
-landuse=military [0x04 resolution 19]
-landuse=quarry [0x10f01 resolution 19]
-landuse=village_green [0x17 resolution 20]
-place=village [0x03 resolution 19]
 
 # dedicate resolution 24 for building=* instead of related landuse=*
 landuse=industrial [0x0c resolution 23-19]
@@ -95,27 +107,10 @@ landuse=construction [0x0c resolution 21]
 
 landuse=basin|landuse=reservoir|natural=bay {set natural=water}
 
-natural=glacier [0x4d resolution 18]
-natural=marsh [0x51 resolution 20]
-natural=mud [0x51 resolution 20]
-natural=wetland [0x51 resolution 20]
-leisure=swimming_pool [0x3d resolution 21-23 continue]
-leisure=swimming_pool [0x3c resolution 24]
-natural=waterfall | waterway=waterfall [0x47 resolution 21]
-natural=sea { add mkgmap:skipSizeFilter=true } [0x32 resolution 10]
-
-natural=water & area_size() >=100000 [0x3d resolution 15-19 continue]
-natural=water & area_size() >=100000 [0x3c resolution 20]
-natural=water & area_size() >=25000 [0x3d resolution 15-21 continue]
-natural=water & area_size() >=25000 [0x3c resolution 22]
-natural=water [0x3d resolution 19-22 continue]
-natural=water [0x3c resolution 23]
-
 waterway=riverbank & area_size()>1000000 [0x47 resolution 10-19 continue]
 waterway=riverbank & area_size()>1000000 [0x46 resolution 20]
 waterway=riverbank [0x47 resolution 20-22 continue]
 waterway=riverbank [0x46 resolution 23]
-waterway=boat_yard | leasure=marina | (highway=pier & area=yes) [0x09 resolution 23]
 
 #military=airfield [0x04 resolution 20]
 #military=barracks [0x04 resolution 23]
@@ -156,4 +151,4 @@ historic=archaeological_site | historic=ruins [0x1d resolution 21]
 <finalize>
 # The finalizer section is executed for each element when a rule with an element type matches
 
-name=* { name '${name}' }
+# name=* { name '${name}' }
