@@ -143,8 +143,8 @@ highway=secondary {name '${name}' | '${ref}' } [0x04 road_class=2 road_speed=4 r
 
 highway=secondary_link {delete name} [0x08 road_class=2 road_speed=1 resolution 22]
 
-highway=tertiary {delete name} [0x0e road_class=1 road_speed=4 resolution 19-21 continue with_actions]
-highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue with_actions]
+highway=tertiary {delete name} [0x0e road_class=1 road_speed=4 resolution 19-21 continue]
+highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
 highway=tertiary {name '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
 highway=tertiary_link {delete name} [0x08 road_class=1 road_speed=1 resolution 22]
@@ -259,7 +259,7 @@ include 'inc/access';
 
 # name=* { name '${name}' }
 
-highway=* & ref=* { addlabel '${ref}' }
-highway=* & int_ref=* { addlabel '${int_ref}' }
-highway=* & nat_ref=* { addlabel '${nat_ref}' }
-highway=* & reg_ref=* { addlabel '${reg_ref}' }
+# highway=* & ref=* { addlabel '${ref}' }
+# highway=* & int_ref=* { addlabel '${int_ref}' }
+# highway=* & nat_ref=* { addlabel '${nat_ref}' }
+# highway=* & reg_ref=* { addlabel '${reg_ref}' }
