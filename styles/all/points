@@ -283,7 +283,7 @@ healthcare=* | amenity=dentist | amenity=doctors [0x3002 resolution 24]
 highway=motorway_junction [0x2100 resolution 24]
 highway=services & mkgmap:area2poi!=true [0x210f resolution 24 default_name 'Services']
 
-leisure=pitch { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24]
+# 2fix temp del to hide addpoitoareas leisure=pitch { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24]
 leisure=recreation_ground [0x2c08 resolution 24]
 leisure=sports_center | leisure=sports_centre { name '${name} (${sport})' | '${name}' } [0x2d0a resolution 24]
 #leisure=stadium { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24]
