@@ -108,7 +108,7 @@ leisure=ice_rink [0x19 resolution 22]
 leisure=water_park [0x09 resolution 23]
 
 # dedicate resolution 24 for building=* instead of related landuse=*
-landuse=industrial [0x0c resolution 23-19]
+landuse=industrial {delete name} [0x0c resolution 23-19]
 landuse=retail [0x08 resolution 23-20]
 landuse=commercial [0x08 resolution 19]
 landuse=construction [0x0c resolution 21]
