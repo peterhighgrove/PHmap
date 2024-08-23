@@ -306,7 +306,7 @@ leisure=garden & name=* [0x2c06 resolution 24]
 leisure=marina [0x4300 resolution 24]
 # leisure=nature_reserve & name=* [0x6612 resolution 24]
 leisure=park [0x2c06 resolution 24]
-leisure=playground [0x2c06 resolution 24]
+leisure=playground [0x1150a resolution 24]
 leisure=water_park [0x2b04 resolution 24]
 
 railway=halt [0x2f08 resolution 23]
