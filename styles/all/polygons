@@ -8,13 +8,11 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
-leisure=* & sport=* & name=* { set name='${name} (${sport})' }
-leisure=* & sport=* & name!=* { add name='${sport}' }
-
-include 'inc/name';
+# include 'inc/name';
 
 # buildings tag should be FIRST
-building=* & area!=no [0x13 resolution 23 continue]
+building=* & landuse=industrial & area!=no {delete name} [0x13 resolution 23]
+building=* & area!=no [0x13 resolution 23]
 
 (landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {delete name} [0x38 resolution 18]
 (landuse=forest|landuse=wood|natural=wood) & (wood=coniferous) {name '${name}' | '${ref}' } [0x38 resolution 23]
@@ -78,6 +76,9 @@ waterway=boat_yard | leasure=marina [0x09 resolution 23]
 leisure=garden [0x10 resolution 21]  
 leisure=golf_course [0x18 resolution 21] 
 leisure=park [0x17 resolution 20]
+
+leisure=* & sport=* & name=* { set name='${name} (${sport})' }
+leisure=* & sport=* & name!=* { add name='${sport}' }
 leisure=pitch {delete name} [0x41 resolution 22 continue]
 leisure=pitch {name '${name}' | '${sport}'} [0x41 resolution 24]
 leisure=recreation_ground [0x19 resolution 21]

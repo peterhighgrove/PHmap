@@ -119,46 +119,46 @@ highway=* & disused=yes & maxspeed!=* { add mkgmap:road-speed = '-2' }
 highway=motorway {delete name} [0x10e06 resolution 14-17 continue]
 highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x01 road_class=4 road_speed=7 resolution 18]
 
-highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 20]
-highway=motorway_link [0x09 road_class=3 road_speed=2 resolution 20]
+highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 22]
+highway=motorway_link [0x09 road_class=3 road_speed=2 resolution 22]
 
 highway=trunk {delete name} [0x10e07 resolution 16-17 continue]
 highway=trunk {name '${ref}-${name}' | '${name}' | '${ref}' } [0x02 road_class=4 road_speed=6 resolution 18]
 
-highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 20]
-highway=trunk_link [0x09 road_class=3 road_speed=2 resolution 20]
+highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 22]
+highway=trunk_link [0x09 road_class=3 road_speed=2 resolution 22]
 
 highway=primary {delete name} [0x10e08 resolution 16-18 continue]
 highway=primary {delete name} [0x03 resolution 19-23 continue]
 highway=primary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x03 road_class=3 road_speed=5 resolution 24]
 
-highway=primary_link [0x0b road_class=3 road_speed=1 resolution 21]
+highway=primary_link [0x0b road_class=3 road_speed=1 resolution 23]
 
 highway=secondary {delete name} [0x10e09 resolution 18-18 continue]
 highway=secondary {delete name} [0x04 resolution 21-23 continue]
 highway=secondary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x04 road_class=2 road_speed=4 resolution 24]
 
-highway=secondary_link {delete name} [0x04 road_class=2 road_speed=1 resolution 22]
+highway=secondary_link {delete name} [0x04 road_class=2 road_speed=1 resolution 23]
 
 highway=tertiary {delete name} [0x10e0a road_class=1 road_speed=4 resolution 19-21 continue]
 highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
 highway=tertiary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
-highway=tertiary_link {delete name} [0x05 road_class=1 road_speed=1 resolution 22]
+highway=tertiary_link {delete name} [0x05 road_class=1 road_speed=1 resolution 23]
 
 highway=residential | highway=minor {delete name} [0x10e0b road_class=0 road_speed=2 resolution 22-23 continue]
 # highway=residential | highway=minor {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
 highway=residential | highway=minor {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 
-# highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
-# highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
-highway=service {delete name} [0x010e0c road_class=0 road_speed=2 resolution 20-22 continue] 
-highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 23-23 continue] 
-highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
-
 highway=unclassified {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
 highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 23-23 continue]
 highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x07 road_class=0 road_speed=3 resolution 24]
+
+# highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
+# highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
+highway=service {delete name} [0x010e0c road_class=0 road_speed=2 resolution 20-23 continue] 
+# highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 23-23 continue] 
+highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
 
 highway=track & tracktype~'grade[3-4]' {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
 highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]

@@ -62,7 +62,7 @@ internet_access=* & internet_access!=no & internet_access!=yes { name 'Internet(
   set ref='${ref|def:}-';
 }
 
-include 'inc/name';
+# include 'inc/name';
 
 # place=city & population > 999999 & name=*  {set cityxx=yes} [0x0100 resolution 11 continue with_actions]
 # place=city & population > 799999 & cityxx!=yes & name=*  {set cityxx=yes} [0x0200 resolution 12 continue with_actions]
@@ -103,18 +103,18 @@ place=isolated_dwelling {name '${name}'} [0x3909 resolution 23]
 place=island {name '${name}'} [0x0e00 resolution 21-22]
 place=islet {name '${name}'} [0x0f00 resolution 22]
 
-tourism=hotel | tourism=motel [0x2b01 resolution 24] 
-tourism=hostel [0x2b01 resolution 21]
-tourism=guest_house [0x2b01 resolution 21]
-tourism=chalet {name '${name}'} [0x2b02 resolution 21]
-tourism=alpine_hut {name '${name}'} [0x2b02 resolution 21]
-tourism=wilderness_hut {name '${name}'} [0x2b02 resolution 21]
+tourism=hotel | tourism=motel [0x11601 resolution 24] 
+tourism=hostel [0x11601 resolution 21]
+tourism=guest_house [0x11601 resolution 21]
+tourism=chalet {name '${name}'} [0x11602 resolution 21]
+tourism=alpine_hut {name '${name}'} [0x11602 resolution 21]
+tourism=wilderness_hut {name '${name}'} [0x11602 resolution 21]
 # amenity=shelter is ambiguous; when possible, consider using other tags:
 #  tourism=lean_to or tourism=picnic_site
 #  shelter=yes on highway=bus_stop or highway=tram_stop or railway=halt
-amenity=shelter {name '${name}'} [0x2b06 resolution 21]
+amenity=shelter {name '${name}'} [0x11606 resolution 21]
 # tourism=lean_to replaces some uses of amenity=shelter
-tourism=lean_to | amenity=lean_to {name '${name}'} [0x2b07 resolution 21]
+tourism=lean_to | amenity=lean_to {name '${name}'} [0x11607 resolution 21]
 
 # Edge 705 displays 0x650a,0x6511,0x6512,0x6513,0x6603,0x6614 as hollow white circles, no menu
 natural=cave_entrance {name '${name}'} [0x6619 resolution 22]
@@ -130,23 +130,23 @@ natural=wetland {name '${name}'} [0x6513 resolution 24]
 natural=stream {name '${name}'} [0x6512 resolution 23]
 natural=volcano [0x2c0c resolution 24]
 
-tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 19] 
+tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x11609 resolution 19] 
 tourism=information | information=board {name '${name} - ${description}' | '${name}'} [0x4c00 resolution 22]
 highway=trailhead {name '${name} - ${description}' | '${name}'} [0x11507 resolution 24]
 amenity=watering_place | (amenity=drinking_water & drinkable!=no) | drinkable=yes {name '${name} - ${description}' | '${name}'} [0x6414 resolution 22]
 
 leisure=firepit [0x11501 resolution 24]
 amenity=bbq [0x11501 resolution 24]
-tourism=camp_site | tourism=caravan_site [0x2b03 resolution 23]
+tourism=camp_site | tourism=caravan_site [0x11603 resolution 23]
 tourism=picnic_site [0x4a00 resolution 24] 
-amenity=toilets & tourism=information [0x2f0c resolution 24] 
+amenity=toilets & tourism=information [0x4c01 resolution 24] 
 amenity=toilets [0x4e00 resolution 23] 
-tourism=attraction & historic=* [0x2c02 resolution 24]
-tourism=attraction [0x2c04 resolution 24]
-highway=bus_stop [0x2f17 resolution 23]
-amenity=parking & access!=private & is_in(landuse,residential,in)=no [0x2f0b resolution 19]
-amenity=parking & access!=private [0x2f0b resolution 22]
-amenity=parking_space & access!=private [0x2f0b resolution 22]
+tourism=attraction & historic=* [0x11506 resolution 24]
+tourism=attraction [0x1160a resolution 24]
+highway=bus_stop [0x4e02 resolution 23]
+amenity=parking & access!=private & is_in(landuse,residential,in)=no [0x4e01 resolution 19]
+amenity=parking & access!=private [0x4e01 resolution 22]
+amenity=parking_space & access!=private [0x4e01 resolution 22]
 
 aerialway=*  [0x11508 resolution 24]
 
@@ -169,7 +169,7 @@ barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate [0x
 natural=tree & (name=* | denotation=landmark) & type!=conifer [0x6416 resolution 24]
 natural=tree & (name=* | denotation=landmark) & type=conifer [0x6417 resolution 24]
 
-tourism=artwork [0x2c04 resolution 24]
+# tourism=artwork [0x2c04 resolution 24]
 tourism=aquarium [0x2c07 resolution 24]
 tourism=museum [0x2c02 resolution 24]
 tourism=theme_park [0x2c01 resolution 24]
@@ -189,8 +189,8 @@ natural=glacier [0x650a resolution 24]
 
 historic=castle [0x2c0d resolution 21]
 historic=museum [0x2c02 resolution 24]
-historic=archaeological_site | historic=ruins [0x2c02 resolution 24]
-historic=memorial [0x2c02 resolution 24]
+historic=archaeological_site | historic=ruins [0x11608 resolution 24]
+historic=memorial [0x11608 resolution 24]
 
 aeroway=airport [0x2f04 resolution 22]
 aeroway=aerodrome [0x2f04 resolution 22]
@@ -272,7 +272,7 @@ amenity=restaurant [0x2a00 resolution 24]
 amenity=school [0x2c05 resolution 24]
 # amenity=supermarket is superceded by shop=supermarket
 amenity=supermarket [0x2e02 resolution 24]
-amenity=taxi [0x2f17 resolution 24]
+amenity=taxi [0x4e03 resolution 24]
 amenity=telephone [0x2f12 resolution 24]
 amenity=theatre [0x2d01 resolution 24]
 amenity=townhall [0x3003 resolution 24]
