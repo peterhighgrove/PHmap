@@ -22,4 +22,4 @@ java -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\mkgmap.jar" --generate-se
 move /Y "C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps\gmapsupp.img" "C:\Users\peter\Documents\Maps Garmin\PHmaps\FRra_PHmap_latest_phTyp25.img"
 copy "C:\Users\peter\Documents\Maps Garmin\PHmaps\FRra_PHmap_latest_phTyp25.img" "C:\Users\peter\OneDrive\Dokument Peter OneDrive\Träning\Maps Garmin IMG\PHmaps"
 
-"C:\Program Files\Syncovery\SyncoveryService.exe" /RUNX="GarminMapsToWatch" /U /P /O
+"C:\Program Files\Syncovery\Syncovery.exe" /RUNX="GarminMapsToWatch" /O

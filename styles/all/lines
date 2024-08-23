@@ -156,11 +156,12 @@ highway=service {delete name} [0x010e0c road_class=0 road_speed=2 resolution 20-
 highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 23-23 continue] 
 highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
 
-highway=unclassified {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-21 continue]
-highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 22-23 continue]
+highway=unclassified {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
+highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 23-23 continue]
 highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x07 road_class=0 road_speed=3 resolution 24]
 
-highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 22]
+highway=track & tracktype~'grade[3-4]' {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
+highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
 # To allow bicycling, add 'add bicycle=yes'
