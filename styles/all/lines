@@ -116,95 +116,91 @@ highway=* & construction=* & maxspeed!=* { add mkgmap:road-speed = '-1' }
 highway=* & disused=yes & maxspeed!=* { add mkgmap:road-speed = '-2' }
 
 # Ways sorted roughly by descending order of class
-highway=motorway {delete name} [0x09 resolution 14-17 continue]
+highway=motorway {delete name} [0x10e06 resolution 14-17 continue]
 highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x01 road_class=4 road_speed=7 resolution 18]
 
-highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x06 road_class=3 road_speed=2 resolution 20]
+highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 20]
 highway=motorway_link [0x09 road_class=3 road_speed=2 resolution 20]
 
-highway=trunk {delete name} [0x0b resolution 16-17 continue]
-highway=trunk {delete name} [0x04 resolution 18-18 continue]
-highway=trunk {name '${ref}-${name}' | '${name}' | '${ref}' } [0x02 road_class=4 road_speed=6 resolution 19]
+highway=trunk {delete name} [0x10e07 resolution 16-17 continue]
+highway=trunk {name '${ref}-${name}' | '${name}' | '${ref}' } [0x02 road_class=4 road_speed=6 resolution 18]
 
-highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x06 road_class=3 road_speed=2 resolution 20]
+highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x09 road_class=3 road_speed=2 resolution 20]
 highway=trunk_link [0x09 road_class=3 road_speed=2 resolution 20]
 
-highway=primary {delete name} [0x06 resolution 16-17 continue]
-highway=primary {delete name} [0x0b resolution 18-18 continue]
+highway=primary {delete name} [0x10e08 resolution 16-18 continue]
 highway=primary {delete name} [0x03 resolution 19-23 continue]
 highway=primary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x03 road_class=3 road_speed=5 resolution 24]
 
-highway=primary_link [0x08 road_class=3 road_speed=1 resolution 21]
+highway=primary_link [0x0b road_class=3 road_speed=1 resolution 21]
 
-highway=secondary {delete name} [0x06 resolution 18-18 continue]
-highway=secondary {delete name} [0x0b resolution 19-20 continue]
+highway=secondary {delete name} [0x10e09 resolution 18-18 continue]
 highway=secondary {delete name} [0x04 resolution 21-23 continue]
 highway=secondary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x04 road_class=2 road_speed=4 resolution 24]
 
-highway=secondary_link {delete name} [0x08 road_class=2 road_speed=1 resolution 22]
+highway=secondary_link {delete name} [0x04 road_class=2 road_speed=1 resolution 22]
 
-highway=tertiary {delete name} [0x0e road_class=1 road_speed=4 resolution 19-21 continue]
+highway=tertiary {delete name} [0x10e0a road_class=1 road_speed=4 resolution 19-21 continue]
 highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
 highway=tertiary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
-highway=tertiary_link {delete name} [0x08 road_class=1 road_speed=1 resolution 22]
+highway=tertiary_link {delete name} [0x05 road_class=1 road_speed=1 resolution 22]
 
-highway=minor {delete name} [0x06 road_class=1 road_speed=3 resolution 21]
+highway=residential | highway=minor {delete name} [0x10e0b road_class=0 road_speed=2 resolution 22-22 continue]
+highway=residential | highway=minor {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
+highway=residential | highway=minor {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 
-highway=unclassified {delete name} [0x0f road_class=0 road_speed=3 resolution 20-20 continue]
-highway=unclassified {delete name} [0x0e road_class=0 road_speed=3 resolution 21-21 continue]
-highway=unclassified {delete name} [0x05 road_class=0 road_speed=3 resolution 22-23 continue]
-highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x05 road_class=0 road_speed=3 resolution 24]
+# highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
+# highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
+highway=service {delete name} [0x010e0c road_class=0 road_speed=2 resolution 20-21 continue] 
+highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 22-23 continue] 
+highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
+
+highway=unclassified {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-21 continue]
+highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 22-23 continue]
+highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x07 road_class=0 road_speed=3 resolution 24]
+
+highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 22]
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
 # To allow bicycling, add 'add bicycle=yes'
-highway=pedestrian & area!=yes {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
-highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=0 resolution 23]
-highway=living_street {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
-highway=living_street {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=1 resolution 23]
-highway=residential {delete name} [0x0f road_class=0 road_speed=2 resolution 22-22 continue]
-highway=residential {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
-highway=residential {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
-highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
-highway=byway [0x16 road_class=0 road_speed=0 resolution 23]
-
-highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
-highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
-highway=service {delete name} [0x0f road_class=0 road_speed=2 resolution 20-22 continue] 
-highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 23 continue] 
-highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
-
+highway=pedestrian & area!=yes {delete name} [0x0e road_class=0 road_speed=2 resolution 22-23 continue]
+highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=0 resolution 24]
+highway=living_street {delete name} [0x0e road_class=0 road_speed=2 resolution 22-23 continue]
+highway=living_street {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=1 resolution 24]
 
 #peho-changes #commented out
 #(highway=footway|highway=path) & tracktype~'grade[1-2]' {add access = no; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22] 
 #peho-changes #commented out
 #highway=footway|highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
 
+highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
 highway=cycleway [0x10e03 road_class=0 road_speed=1 resolution 21-22 continue] 
 highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23] 
-highway=footway [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
+highway=footway [0x10e02 road_class=0 road_speed=0 resolution 21-22 continue] 
 highway=footway [0x10e01 road_class=0 road_speed=0 resolution 23] 
-highway=path & width < 0.8 [0x17 road_class=0 road_speed=0 resolution 24] 
-highway=path & tracktype~'grade[3-6]' [0x17 road_class=0 road_speed=0 resolution 24] 
-highway=path {delete name} [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
-highway=path {delete name} [0x16 road_class=0 road_speed=0 resolution 23 continue] 
+
+highway=path & width < 0.8 [0x10e02 road_class=0 road_speed=0 resolution 24] 
+highway=path & tracktype~'grade[3-6]' [0x10e02 road_class=0 road_speed=0 resolution 24] 
+highway=path {delete name} [0x10e02 road_class=0 road_speed=0 resolution 22-22 continue] 
+highway=path {delete name} [0x16 road_class=0 road_speed=0 resolution 23-23 continue] 
 highway=path {name '${name}' | '${ref}' } [0x16 road_class=0 road_speed=0 resolution 24] 
 highway=steps [0x13 road_class=0 road_speed=0 resolution 23]
 
-#commented away
-#highway=track & tracktype=grade1 [0x0a resolution 21-21 continue] 
-highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 22]
+# highway=track & tracktype=grade1 [0x0a resolution 21-21 continue] 
 highway=track & tracktype~'grade[5-6]' {delete name} [0x10e03 road_class=0 road_speed=0 resolution 22]
 highway=track {delete name} [0x10e03 road_class=0 road_speed=1 resolution 21-22 continue]
-highway=track {delete name} [0x0a road_class=0 road_speed=1 resolution 23 continue]
+highway=track {delete name} [0x0a road_class=0 road_speed=1 resolution 23-23 continue]
 highway=track {name '${name}' | '${ref}' } [0x0a road_class=0 road_speed=1 resolution 24]
 highway=unsurfaced [0x0a road_class=0 road_speed=1 resolution 22]
-highway=road { add mkgmap:dead-end-check = false} [0x06 road_class=0 road_speed=1 resolution 22]
+highway=road { add mkgmap:dead-end-check = false} [0x07 road_class=0 road_speed=1 resolution 22]
 
 # Mop up any unrecognised highway types
-highway=* & highway!=proposed & area!=yes [0x07 road_class=0 road_speed=0 resolution 23] 
+# highway=* & highway!=proposed & area!=yes [0x07 road_class=0 road_speed=0 resolution 23] 
+highway=* [0x07 road_class=0 road_speed=0 resolution 23] 
 
 natural=coastline [0x15 resolution 12]
+natural=cliff [0x10601 resolution 23-23 continue]
 natural=cliff [0x31 resolution 24]
 barrier=fence | fenced=yes [0x33 resolution 24 continue]
 natural=wood | landuse=forest [0x11002  resolution 24 continue] 
