@@ -7,7 +7,7 @@ Java -Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\mkgmap.jar" --gene
 
 move /Y "C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps\gmapsupp.img" "C:\Users\peter\Documents\Maps Garmin\PHmaps\SE_PHmap_latest_phTyp25.img"
 copy "C:\Users\peter\Documents\Maps Garmin\PHmaps\SE_PHmap_latest_phTyp25.img" "C:\Users\peter\OneDrive\Dokument Peter OneDrive\Träning\Maps Garmin IMG\PHmaps"
-exit /b
+goto :EOF
 ::France Languedoc
 ::java -Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\splitter\splitter.jar" --output-dir="C:\Users\peter\Documents\Maps Garmin\OSMsplitted\FRld" --mapid=63220001 --description=FRld_240804_OSM_tile "C:\Users\peter\Documents\Maps Garmin\OSMlatest\languedoc-roussillon-latest.osm.pbf" > FRldsplitter.log
 java -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\mkgmap.jar" --generate-sea=multipolygon --add-pois-to-areas --country-name=France --country-abbr=FR --region-name=Languedoc --region-abbr=ld --family-id=4000 --family-name=PHmap --product-id=2000 --draw-priority=21 --code-page=1252 --style-file="C:\Users\peter\Documents\Maps Garmin\PHmap\styles\all" --output-dir="C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps" --gmapsupp -c "C:\Users\peter\Documents\Maps Garmin\OSMsplitted\FRld\template.args" --description=FRld_PHmap_240804-phTyp25 "C:\Users\peter\Documents\Maps Garmin\PHmap\typ\phTyp25.typ" > FRldMKGmap.log
@@ -22,4 +22,5 @@ java -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\mkgmap.jar" --generate-se
 move /Y "C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps\gmapsupp.img" "C:\Users\peter\Documents\Maps Garmin\PHmaps\FRra_PHmap_latest_phTyp25.img"
 copy "C:\Users\peter\Documents\Maps Garmin\PHmaps\FRra_PHmap_latest_phTyp25.img" "C:\Users\peter\OneDrive\Dokument Peter OneDrive\Träning\Maps Garmin IMG\PHmaps"
 
+:EOF
 "C:\Program Files\Syncovery\Syncovery.exe" /RUNX="GarminMapsToWatch" /O
