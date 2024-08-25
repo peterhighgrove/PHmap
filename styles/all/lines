@@ -116,8 +116,8 @@ highway=* & construction=* & maxspeed!=* { add mkgmap:road-speed = '-1' }
 highway=* & disused=yes & maxspeed!=* { add mkgmap:road-speed = '-2' }
 
 # Ways sorted roughly by descending order of class
-highway=motorway {delete name} [0x10e06 resolution 14-17 continue]
-highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x01 road_class=4 road_speed=7 resolution 18]
+highway=motorway {delete name} [0x0101 resolution 14-17 continue]
+highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x0100 road_class=4 road_speed=7 resolution 18]
 
 highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x10f00 road_class=3 road_speed=2 resolution 22]
 highway=motorway_link [0x10f00 road_class=3 road_speed=2 resolution 22]
