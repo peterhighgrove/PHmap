@@ -146,19 +146,19 @@ highway=tertiary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x05 road_clas
 
 highway=tertiary_link {delete name} [0x05 road_class=1 road_speed=1 resolution 23]
 
-highway=residential | highway=minor {delete name} [0x10e0b road_class=0 road_speed=2 resolution 22-23 continue]
-# highway=residential | highway=minor {delete name} [0x06 road_class=0 road_speed=2 resolution 23-23 continue]
-highway=residential | highway=minor {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
+highway=residential {delete name} [0x10e0b road_class=0 road_speed=2 resolution 22-23 continue]
+highway=residential {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 
-highway=unclassified {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
+highway=unclassified {delete name} [0x10b07 road_class=0 road_speed=3 resolution 20-22 continue]
 highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 23-23 continue]
 highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x07 road_class=0 road_speed=3 resolution 24]
 
+highway=road { add mkgmap:dead-end-check = false} [0x07 road_class=0 road_speed=1 resolution 22]
+
 # highway=service & service=parking_aisle [0x0f road_class=0 road_speed=1 resolution 24]
 # highway=service & (service=alley|service=driveway) [0x0f road_class=0 road_speed=0 resolution 23]
-highway=service {delete name} [0x010e0c road_class=0 road_speed=2 resolution 20-23 continue] 
-# highway=service {delete name} [0x07 road_class=0 road_speed=2 resolution 23-23 continue] 
-highway=service {name '${name}' | '${ref}' } [0x07 road_class=0 road_speed=2 resolution 24]
+highway=service {delete name} [0x010b08 road_class=0 road_speed=2 resolution 20-23 continue] 
+highway=service {name '${name}' | '${ref}' } [0x08 road_class=0 road_speed=2 resolution 24]
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
 # To allow bicycling, add 'add bicycle=yes'
@@ -167,25 +167,25 @@ highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x0d road_class=0 r
 highway=living_street {delete name} [0x0e road_class=0 road_speed=2 resolution 22-23 continue]
 highway=living_street {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=1 resolution 24]
 
-# highway=track & tracktype=grade1 [0x0a resolution 21-21 continue] 
-highway=track & tracktype~'grade[3-4]' {delete name} [0x10e0c road_class=0 road_speed=3 resolution 20-22 continue]
-highway=track & tracktype~'grade[3-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]
+highway=track & tracktype~'grade[1]' {delete name} [0x10b07 road_class=0 road_speed=3 resolution 20-22 continue]
+highway=track & tracktype~'grade[1]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]
 
-highway=track & tracktype~'grade[5-6]' {delete name} [0x10e03 road_class=0 road_speed=0 resolution 22]
+highway=track & tracktype~'grade[2-4]' {delete name} [0x10b07 road_class=0 road_speed=3 resolution 20-22 continue]
+highway=track & tracktype~'grade[2-4]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]
+
+highway=track & tracktype~'grade[5]' {delete name} [0x10e03 road_class=0 road_speed=0 resolution 22]
 highway=track {delete name} [0x10e03 road_class=0 road_speed=1 resolution 21-22 continue]
 highway=track {delete name} [0x0a road_class=0 road_speed=1 resolution 23-23 continue]
 highway=track {name '${name}' | '${ref}' } [0x0a road_class=0 road_speed=1 resolution 24]
 highway=unsurfaced [0x0a road_class=0 road_speed=1 resolution 22]
-highway=road { add mkgmap:dead-end-check = false} [0x07 road_class=0 road_speed=1 resolution 22]
-
 #peho-changes #commented out
 #(highway=footway|highway=path) & tracktype~'grade[1-2]' {add access = no; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22] 
 #peho-changes #commented out
 #highway=footway|highway=path [0x16 road_class=0 road_speed=0 resolution 23] 
 
 highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
-highway=cycleway [0x10e03 road_class=0 road_speed=1 resolution 21-22 continue] 
-highway=cycleway [0x10e04 road_class=0 road_speed=1 resolution 23] 
+highway=cycleway [0x10e03 road_class=0 road_speed=0 road_class=0 road_speed=1 resolution 21-22 continue] 
+highway=cycleway [0x10e04 road_class=0 road_speed=0 road_class=0 road_speed=1 resolution 23] 
 highway=footway [0x10e02 road_class=0 road_speed=0 resolution 21-22 continue] 
 highway=footway [0x10e01 road_class=0 road_speed=0 resolution 23] 
 
@@ -198,7 +198,7 @@ highway=steps [0x13 road_class=0 road_speed=0 resolution 23]
 
 # Mop up any unrecognised highway types
 # highway=* & highway!=proposed & area!=yes [0x07 road_class=0 road_speed=0 resolution 23] 
-highway=* [0x07 road_class=0 road_speed=0 resolution 23] 
+highway=* {delete name} [0x07 road_class=0 road_speed=0 resolution 23] 
 
 natural=coastline [0x15 resolution 12]
 natural=cliff [0x10601 resolution 23-23 continue]
