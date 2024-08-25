@@ -116,8 +116,8 @@ highway=* & construction=* & maxspeed!=* { add mkgmap:road-speed = '-1' }
 highway=* & disused=yes & maxspeed!=* { add mkgmap:road-speed = '-2' }
 
 # Ways sorted roughly by descending order of class
-highway=motorway {delete name} [0x0101 resolution 14-17 continue]
-highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x0100 road_class=4 road_speed=7 resolution 18]
+highway=motorway {delete name} [0x00401 resolution 14-17 continue]
+highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x01 road_class=4 road_speed=7 resolution 18]
 
 highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x10f00 road_class=3 road_speed=2 resolution 22]
 highway=motorway_link [0x10f00 road_class=3 road_speed=2 resolution 22]
@@ -162,10 +162,10 @@ highway=service {name '${name}' | '${ref}' } [0x08 road_class=0 road_speed=2 res
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
 # To allow bicycling, add 'add bicycle=yes'
-highway=pedestrian & area!=yes {delete name} [0x0e road_class=0 road_speed=2 resolution 22-23 continue]
-highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=0 resolution 24]
-highway=living_street {delete name} [0x0e road_class=0 road_speed=2 resolution 22-23 continue]
-highway=living_street {name '${name}' | '${ref}' } [0x0d road_class=0 road_speed=1 resolution 24]
+highway=pedestrian & area!=yes {delete name} [0x10b09 road_class=0 road_speed=2 resolution 22-23 continue]
+highway=pedestrian & area!=yes {name '${name}' | '${ref}' } [0x09 road_class=0 road_speed=0 resolution 24]
+highway=living_street {delete name} [0x10b09 road_class=0 road_speed=2 resolution 22-23 continue]
+highway=living_street {name '${name}' | '${ref}' } [0x09 road_class=0 road_speed=1 resolution 24]
 
 highway=track & tracktype~'grade[1]' {delete name} [0x10b07 road_class=0 road_speed=3 resolution 20-22 continue]
 highway=track & tracktype~'grade[1]' {delete name} [0x07 road_class=0 road_speed=0 resolution 23]
