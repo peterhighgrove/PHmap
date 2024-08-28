@@ -130,7 +130,7 @@ natural=wetland {name '${name}'} [0x6513 resolution 24]
 natural=stream {name '${name}'} [0x6512 resolution 23]
 natural=volcano [0x2c0c resolution 24]
 
-tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x11609 resolution 19] 
+tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x11609 resolution 21] 
 tourism=information | information=board {name '${name} - ${description}' | '${name}'} [0x4c00 resolution 22]
 highway=trailhead {name '${name} - ${description}' | '${name}'} [0x11507 resolution 24]
 amenity=watering_place | (amenity=drinking_water & drinkable!=no) | drinkable=yes {name '${name} - ${description}' | '${name}'} [0x6414 resolution 22]

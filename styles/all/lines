@@ -164,7 +164,7 @@ highway=living_street {delete name} [0x10e09 road_class=0 road_speed=2 resolutio
 highway=living_street {name '${name}' | '${ref}' } [0x09 road_class=0 road_speed=1 resolution 24]
 
 highway=track & tracktype=grade1 {delete name} [0x10e11 road_class=0 road_speed=3 resolution 20-22 continue]
-highway=track & tracktype=grade1 {delete name} [0x11 road_class=0 road_speed=0 resolution 23 continue]
+highway=track & tracktype=grade1 {delete name} [0x11 road_class=0 road_speed=0 resolution 23-23 continue]
 highway=track & tracktype=grade1 {name '${name}' | '${ref}' } [0x10 road_class=0 road_speed=1 resolution 24]
 
 highway=track & tracktype=grade2 {delete name} [0x10e10 road_class=0 road_speed=3 resolution 20-22 continue]
@@ -174,7 +174,7 @@ highway=track & tracktype=grade3 {delete name} [0x10e10 road_class=0 road_speed=
 highway=track & tracktype=grade3 {delete name} [0x13 road_class=0 road_speed=0 resolution 23-23 continue]
 highway=track & tracktype=grade3 {name '${name}' | '${ref}' } [0x13 road_class=0 road_speed=1 resolution 24]
 highway=track & tracktype=grade4 {delete name} [0x10e10 road_class=0 road_speed=3 resolution 20-22 continue]
-highway=track & tracktype=grade4 {delete name} [0x14 road_class=0 road_speed=0 resolution 23-23 continue]
+highway=track & tracktype=grade4 {delete name} [0x10e14 road_class=0 road_speed=0 resolution 23-23 continue]
 highway=track & tracktype=grade4 {name '${name}' | '${ref}' } [0x14 road_class=0 road_speed=1 resolution 24]
 
 highway=track & tracktype=grade5 {delete name} [0x15 road_class=0 road_speed=0 resolution 22]
