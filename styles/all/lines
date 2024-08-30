@@ -89,7 +89,7 @@ leisure=track & area!=yes {add highway=footway; name '${name} (${sport})' | '${n
 #(man_made=pier | man_made=piste:halfpipe) & area!=yes {add highway=footway; name '${ref} ${name}' | '${ref}' | '${name}' }
 man_made=piste:halfpipe & area!=yes {add highway=footway; name '${ref} ${name}' | '${ref}' | '${name}' }
 #peho added pier
-man_made=pier [0x10e05 resolution 23 continue]
+man_made=pier [0x3f resolution 23 continue]
 
 # Roundabouts
 junction=roundabout & (highway=trunk | highway=trunk_link) [0x0c road_class=3 road_speed=2 resolution 18]
@@ -110,42 +110,43 @@ highway=* & construction=* & maxspeed!=* { add mkgmap:road-speed = '-1' }
 highway=* & disused=yes & maxspeed!=* { add mkgmap:road-speed = '-2' }
 
 highway=* & bridge=* [0x2b resolution 24 continue]
+highway=* & tunnel=* [0x2a resolution 24 continue]
 
 # Ways sorted roughly by descending order of class
-highway=motorway {delete name} [0x10000 resolution 14-17 continue]
+highway=motorway {delete name} [0x10e01 resolution 14-17 continue]
 highway=motorway {name '${ref}-${name}' | '${name}' | '${ref}' } [0x01 road_class=4 road_speed=7 resolution 18]
 
 highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x0a road_class=3 road_speed=2 resolution 22]
 highway=motorway_link [0x0a road_class=3 road_speed=2 resolution 22]
 
-highway=trunk {delete name} [0x10001 resolution 16-17 continue]
+highway=trunk {delete name} [0x10e02 resolution 16-17 continue]
 highway=trunk {name '${ref}-${name}' | '${name}' | '${ref}' } [0x02 road_class=4 road_speed=6 resolution 18]
 
 highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=true) [0x0b road_class=3 road_speed=2 resolution 22]
 highway=trunk_link [0x0b road_class=3 road_speed=2 resolution 22]
 
-highway=primary {delete name} [0x10002 resolution 16-18 continue]
+highway=primary {delete name} [0x10e03 resolution 16-18 continue]
 highway=primary {delete name} [0x03 resolution 19-23 continue]
 highway=primary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x03 road_class=3 road_speed=5 resolution 24]
 
-highway=primary_link [0x10e0c road_class=3 road_speed=1 resolution 23]
+highway=primary_link [0x0f road_class=3 road_speed=1 resolution 23]
 
-highway=secondary {delete name} [0x10003 resolution 18-18 continue]
+highway=secondary {delete name} [0x10e04 resolution 18-18 continue]
 highway=secondary {delete name} [0x04 resolution 21-23 continue]
 highway=secondary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x04 road_class=2 road_speed=4 resolution 24]
 
 highway=secondary_link {delete name} [0x04 road_class=2 road_speed=1 resolution 23]
 
-highway=tertiary {delete name} [0x10e0a road_class=1 road_speed=4 resolution 19-21 continue]
+highway=tertiary {delete name} [0x10e05 road_class=1 road_speed=4 resolution 19-21 continue]
 highway=tertiary {delete name} [0x05 road_class=1 road_speed=4 resolution 22-23 continue]
 highway=tertiary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x05 road_class=1 road_speed=4 resolution 24]
 
 highway=tertiary_link {delete name} [0x05 road_class=1 road_speed=1 resolution 23]
 
-highway=residential {delete name} [0x10e0b road_class=0 road_speed=2 resolution 22-23 continue]
+highway=residential {delete name} [0x10e06 road_class=0 road_speed=2 resolution 22-23 continue]
 highway=residential {name '${name}' | '${ref}' } [0x06 road_class=0 road_speed=2 resolution 24]
 
-highway=unclassified {delete name} [0x10b07 road_class=0 road_speed=3 resolution 20-22 continue]
+highway=unclassified {delete name} [0x10e07 road_class=0 road_speed=3 resolution 20-22 continue]
 highway=unclassified {delete name} [0x07 road_class=0 road_speed=3 resolution 23-23 continue]
 highway=unclassified {name '${ref}-${name}' | '${name}' | '${ref}' } [0x07 road_class=0 road_speed=3 resolution 24]
 
@@ -153,7 +154,7 @@ highway=road { add mkgmap:dead-end-check = false} [0x07 road_class=0 road_speed=
 
 # highway=service & service=parking_aisle [0x0c road_class=0 road_speed=1 resolution 24]
 # highway=service & (service=alley|service=driveway) [0x0c road_class=0 road_speed=0 resolution 23]
-highway=service {delete name} [0x010b08 road_class=0 road_speed=2 resolution 20-23 continue] 
+highway=service {delete name} [0x10e08 road_class=0 road_speed=2 resolution 20-23 continue] 
 highway=service {name '${name}' | '${ref}' } [0x08 road_class=0 road_speed=2 resolution 24]
 
 # Some countries allow, others disallow bicycling on pedestrian streets.
@@ -174,7 +175,8 @@ highway=track & tracktype=grade3 {delete name} [0x10e10 road_class=0 road_speed=
 highway=track & tracktype=grade3 {delete name} [0x13 road_class=0 road_speed=0 resolution 23-23 continue]
 highway=track & tracktype=grade3 {name '${name}' | '${ref}' } [0x13 road_class=0 road_speed=1 resolution 24]
 highway=track & tracktype=grade4 {delete name} [0x10e10 road_class=0 road_speed=3 resolution 20-22 continue]
-highway=track & tracktype=grade4 {delete name} [0x10e14 road_class=0 road_speed=0 resolution 23-23 continue]
+# 0x14 do not work as expected on res23, res 23 is visible on 200-300m, but 0x14 do not show on 300m.
+highway=track & tracktype=grade4 {delete name} [0x10e14 road_class=0 road_speed=0 resolution 23-23 continue] 
 highway=track & tracktype=grade4 {name '${name}' | '${ref}' } [0x14 road_class=0 road_speed=1 resolution 24]
 
 highway=track & tracktype=grade5 {delete name} [0x15 road_class=0 road_speed=0 resolution 22]
@@ -190,11 +192,11 @@ highway=cycleway [0x0d road_class=0 road_speed=0 road_class=0 road_speed=1 resol
 highway=footway [0x10e0e road_class=0 road_speed=0 resolution 21-22 continue] 
 highway=footway [0x0e road_class=0 road_speed=0 resolution 23] 
 
-highway=path & width < 0.8 [0x17 road_class=0 road_speed=0 resolution 24] 
-highway=path & trail_visibility~'(intermediate|bad|horrible)' [0x18 road_class=0 road_speed=0 resolution 24] 
+highway=path & width < 0.8 {name '${width}m-${trail_visibility}-${name}' | '${width}m-${name}' | '${width}m' } [0x17 road_class=0 road_speed=0 resolution 24] 
+highway=path & trail_visibility ~ '(intermediate|bad|horrible)' {name '${trail_visibility}-${name}' | '${trail_visibility}'} [0x18 road_class=0 road_speed=0 resolution 24] 
 highway=path {delete name} [0x17 road_class=0 road_speed=0 resolution 21-22 continue] 
 highway=path {delete name} [0x16 road_class=0 road_speed=0 resolution 23-23 continue] 
-highway=path {name '${name}' | '${ref}' } [0x16 road_class=0 road_speed=0 resolution 24] 
+highway=path {name '${trail_visibility}-${name}' | '${trail_visibility}' | '${name}' } [0x16 road_class=0 road_speed=0 resolution 24] 
 highway=steps [0x1a road_class=0 road_speed=0 resolution 23]
 
 # Mop up any unrecognised highway types
@@ -202,14 +204,14 @@ highway=steps [0x1a road_class=0 road_speed=0 resolution 23]
 highway=* {delete name} [0x07 road_class=0 road_speed=0 resolution 23] 
 
 natural=coastline [0x30 resolution 12]
-natural=cliff [0x10601 resolution 22-23 continue]
+natural=cliff [0x10f11 resolution 22-23 continue]
 natural=cliff [0x31 resolution 24]
-natural=arete [0x10115 resolution 22]
-natural=ridge [0x10115 resolution 22]
+natural=arete {name '${name}' | '${ref}' } [0x32 resolution 22]
+natural=ridge {name '${name}' | '${ref}' } [0x32 resolution 22]
 barrier=fence | fenced=yes [0x33 resolution 24 continue]
 natural=wood | landuse=forest [0x11002  resolution 24 continue] 
 
-route=ferry {add mkgmap:ferry=1} [0x10017 road_class=3 road_speed=0 resolution 19]
+route=ferry {add mkgmap:ferry=1} [0x2f road_class=3 road_speed=0 resolution 19]
 
 ((waterway=river | waterway=canal) & (ref:fgkz ~ '\d{1,3}' | CEMT ~ '^[V].{1,2}' )) | fluss=yes [0x27 resolution 14-20 continue]
 ((waterway=river | waterway=canal) & (ref:fgkz!=* & CEMT !=*)) [0x27 resolution 16-20 continue]
@@ -224,10 +226,10 @@ power=minor_line {delete name} [0x29 resolution 24]
 
 #railway=abandoned [0x10 road_class=0 road_speed=1 resolution 22]
 railway=platform [0x2d road_class=0 road_speed=0 resolution 23]
-(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel!=yes [0x10014 resolution 19-23 continue]
-(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel=yes [0x10014 resolution 19-23 continue]
-(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel=yes [0x10014 resolution 24]
-(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) [0x10014 resolution 24]
+(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel!=yes [0x2e resolution 19-23 continue]
+(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel=yes [0x2e resolution 19-23 continue]
+(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) & tunnel=yes [0x2e resolution 24]
+(railway=rail | railway=disused | railway=light_rail | railway=monorail | railway=narrow_gauge | railway=subway) [0x2e resolution 24]
 
 (man_made=cable|(man_made=* & man_made ~ '.*pipe.*')) & area!=yes &
 tunnel!=yes & location != underground
