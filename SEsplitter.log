@@ -30,7 +30,7 @@ stop-after=dist
 wanted-admin-level=5
 write-kml=
 Elapsed time: 0s   Memory: Current 245MB (5MB used, 240MB free) Max 7282MB
-Time started: Fri Aug 16 16:47:46 CEST 2024
+Time started: Sat Aug 31 08:01:21 CEST 2024
 Map is being split for resolution 13:
  - area boundaries are aligned to 0x800 map units (0.0439453125 degrees)
  - areas are multiples of 0x800 map units wide and high
@@ -45,7 +45,7 @@ Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
 70 000 000 nodes parsed... id=8833318163
 80 000 000 nodes parsed... id=10000474863
 90 000 000 nodes parsed... id=11585245753
-Fill-densities-map pass took 22985 ms
+Fill-densities-map pass took 26819 ms
 Exact map coverage read from input file(s) is (55.02652645111084,10.5413818359375) to (69.06643152236938,24.224724769592285)
 Rounded map coverage is (55.01953125,10.5029296875) to (69.08203125,24.2578125)
 Splitting nodes into areas containing a maximum of 1 600 000 nodes each...
@@ -129,7 +129,7 @@ Area 63210058 covers (58.53515625,12.6123046875) to (59.23828125,14.0625) and co
 Area 63210059 covers (58.2275390625,12.6123046875) to (58.53515625,14.0625) and contains 1563585 nodes (97 %)
 Area 63210060 covers (58.2275390625,14.0625) to (58.7548828125,15.6005859375) and contains 1553489 nodes (97 %)
 Area 63210061 covers (58.7548828125,14.0625) to (59.23828125,15.6005859375) and contains 1568703 nodes (98 %)
-Creating the initial areas took 1016 ms
+Creating the initial areas took 1035 ms
 61 areas:
 Area 63210001: 2564096,741376 to 2670592,1124352 covers (0x272000,0xb5000) to (0x28c000,0x112800) SE_240804_OSM_tile
 Area 63210002: 2641920,651264 to 2670592,741376 covers (0x285000,0x9f000) to (0x28c000,0xb5000) SE_240804_OSM_tile
@@ -257,10 +257,10 @@ way Map details: ~88 MB, including 10 array(s) with 8 MB
   Number of stored combis in dictionary: 456
   Number of detected problem ways: 29 722
   Number of detected problem rels: 4 342
-  JVM Memory Info: Current 3781MB (2691MB used, 1090MB free) Max 7282MB
+  JVM Memory Info: Current 3661MB (1911MB used, 1750MB free) Max 7282MB
 
-Problem-list-generator pass 1 took 24849 ms
-Problem-list-generator pass(es) took 24911 ms
+Problem-list-generator pass 1 took 26681 ms
+Problem-list-generator pass(es) took 26743 ms
 cached 59 combinations of areas that form rectangles.
 AreaGridTree [512][512] for grid area (55.01953125,10.5029296875) to (69.08203125,24.2578125) requires max. 4 checks for each node (0 sub grid(s))
 -----------------------------------
@@ -277,7 +277,7 @@ Stats for MultiTileProcessor pass 1
   Number of stored relations: 244 251
   Number of stored tile combinations in multiTileDictionary: 327
 Status: Finished collecting relations.
-  JVM Memory Info: Current 3781MB (3368MB used, 413MB free) Max 7282MB
+  JVM Memory Info: Current 3661MB (2587MB used, 1074MB free) Max 7282MB
 starting to resolve relations containing problem relations ...
 Finished adding members of problem relations to problem lists.
 Stats for MultiTileProcessor pass 1
@@ -287,7 +287,7 @@ Stats for MultiTileProcessor pass 1
   Number of stored relations: 4 372
   Number of stored tile combinations in multiTileDictionary: 327
 Status: starting to collect ids of needed way nodes ...
-Multi-tile analyses phase 1 took 720 ms
+Multi-tile analyses phase 1 took 681 ms
 -----------------------------------
 Executing multi-tile analyses phase 2
 Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
@@ -316,8 +316,8 @@ Stats for MultiTileProcessor pass 2
   Number of stored relations: 4 372
   Number of stored tile combinations in multiTileDictionary: 327
 Status: Starting to collect coordinates for 5 790 122 needed nodes.
-  JVM Memory Info: Current 3725MB (962MB used, 2763MB free) Max 7282MB
-Multi-tile analyses phase 2 took 7940 ms
+  JVM Memory Info: Current 3650MB (2521MB used, 1129MB free) Max 7282MB
+Multi-tile analyses phase 2 took 8146 ms
 -----------------------------------
 Executing multi-tile analyses phase 3
 Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
@@ -340,7 +340,7 @@ Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
 7 000 000 ways parsed... id=1119277274
 8 000 000 ways parsed... id=1283072221
 Found 5 790 115 of 5 790 122 needed nodes.
-  JVM Memory Info: Current 3720MB (1989MB used, 1731MB free) Max 7282MB
+  JVM Memory Info: Current 2131MB (1561MB used, 570MB free) Max 7282MB
 Calculating tiles for problem relations...
 Warning: rel 54219 touches 33 tiles.
 Warning: rel 54368 touches 33 tiles.
@@ -432,7 +432,7 @@ Stats for MultiTileProcessor pass 3
   SparseBitSet neededWays contains now 145 162 Ids.
   Number of stored tile combinations in multiTileDictionary: 715
 Status: Making sure that needed way nodes of relations are written to the correct tiles...
-Multi-tile analyses phase 3 took 23282 ms
+Multi-tile analyses phase 3 took 24014 ms
 -----------------------------------
 Executing multi-tile analyses phase 4
 Processing C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf
@@ -452,14 +452,14 @@ Stats for MultiTileProcessor pass 4
   wayWriterMap contains 138 930 pairs.
   relWriterMap contains 4 372 pairs.
 Status: Finished processing problem lists.
-Multi-tile analyses phase 4 took 7922 ms
+Multi-tile analyses phase 4 took 8219 ms
 -----------------------------------
 Writing results of MultiTileAnalyser to temp files ...
-Wrote 5790115 node pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node2151889220814254281.tmp
-Wrote 138930 way pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7795602345079518806.tmp
-Wrote 4372 rel pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel1015063316393417127.tmp
-Writing temp files took 442 ms
-Distributing data Fri Aug 16 16:49:16 CEST 2024
+Wrote 5790115 node pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node4363018432136443868.tmp
+Wrote 138930 way pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7871648573835810281.tmp
+Wrote 4372 rel pairs to C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel3766896521908252281.tmp
+Writing temp files took 479 ms
+Distributing data Sat Aug 31 08:02:57 CEST 2024
 Processing 61 areas in a single pass
 coord Map: uses SparseLong2IntMap
 way Map: uses SparseLong2IntMap
@@ -475,17 +475,17 @@ Bounding box 10.54138 55.026520000000005 24.22472 69.06643000000001
 70 000 000 nodes parsed... id=8833318163
 80 000 000 nodes parsed... id=10000474863
 90 000 000 nodes parsed... id=11585245753
-Writing ways Fri Aug 16 16:49:38 CEST 2024
+Writing ways Sat Aug 31 08:03:20 CEST 2024
+Elapsed time: 2m 0s   Memory: Current 3421MB (2864MB used, 557MB free) Max 7282MB
 1 000 000 ways parsed... id=165541999
 2 000 000 ways parsed... id=285905198
 3 000 000 ways parsed... id=417522515
 4 000 000 ways parsed... id=609814572
 5 000 000 ways parsed... id=744877616
-Elapsed time: 2m 0s   Memory: Current 3732MB (2414MB used, 1318MB free) Max 7282MB
 6 000 000 ways parsed... id=971429736
 7 000 000 ways parsed... id=1119277274
 8 000 000 ways parsed... id=1283072221
-Writing relations Fri Aug 16 16:49:49 CEST 2024
+Writing relations Sat Aug 31 08:03:31 CEST 2024
 100 000 relations parsed... id=10218707
 200 000 relations parsed... id=16094332
 coord Map: 94 461 291 stored long/int pairs require ca. 8 bytes per pair. 3 407 394 chunks are used, the avg. number of values in one 64-chunk is 27.
@@ -494,23 +494,23 @@ coord Map details: ~760 MB, including 91 array(s) with 8 MB
 way Map: 8 158 574 stored long/int pairs require ca. 11 bytes per pair. 888 882 chunks are used, the avg. number of values in one 64-chunk is 9.
 way Map details: ~88 MB, including 10 array(s) with 8 MB
 
-  JVM Memory Info: Current 3750MB (1173MB used, 2577MB free) Max 7282MB
+  JVM Memory Info: Current 3734MB (2925MB used, 809MB free) Max 7282MB
 Full Node tests:  12 669 388
 Quick Node tests: 88 226 979
+Thread worker-9 has finished
+Thread worker-2 has finished
+Thread worker-6 has finished
 Thread worker-0 has finished
+Thread worker-5 has finished
+Thread worker-1 has finished
 Thread worker-3 has finished
 Thread worker-4 has finished
-Thread worker-8 has finished
-Thread worker-1 has finished
 Thread worker-10 has finished
-Thread worker-9 has finished
-Thread worker-5 has finished
-Thread worker-6 has finished
-Thread worker-2 has finished
 Thread worker-7 has finished
-Distribution pass(es) took 34298 ms
-temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node2151889220814254281.tmp was deleted
-temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7795602345079518806.tmp was deleted
-temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel1015063316393417127.tmp was deleted
-Time finished: Fri Aug 16 16:49:50 CEST 2024
-Total time taken: 2 minutes 3 seconds
+Thread worker-8 has finished
+Distribution pass(es) took 34778 ms
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\node4363018432136443868.tmp was deleted
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\way7871648573835810281.tmp was deleted
+temporary file C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE\rel3766896521908252281.tmp was deleted
+Time finished: Sat Aug 31 08:03:32 CEST 2024
+Total time taken: 2 minutes 11 seconds

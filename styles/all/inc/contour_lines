@@ -1,28 +1,24 @@
 # Contours take their name from the elevation setting.
-#contour=elevation & contour_ext=elevation_minor
-#	{ name '${ele|conv:m=>ft}'; }
-#	[0x20 resolution 23]
-#contour=elevation & contour_ext=elevation_medium
-#	{ name '${ele|conv:m=>ft}'; }
-#	[0x21 resolution 20]
-#contour=elevation & contour_ext=elevation_major
-#	{ name '${ele|conv:m=>ft}'; }
-#	[0x22 resolution 19]
-#contour=elevation | contour_ext=elevation
-#	{ name '${ele|conv:m=>ft}'; }
-#	[0x21 resolution 19]
+ contour=elevation & contour_ext=elevation_minor { name '${ele|conv:m=>ft}'; } [0x20 resolution 24]
+ contour=elevation & contour_ext=elevation_medium { name '${ele|conv:m=>ft}'; } [0x20 resolution 22-23 continue]
+ contour=elevation & contour_ext=elevation_medium { name '${ele|conv:m=>ft}'; } [0x21 resolution 24]
+ contour=elevation & contour_ext=elevation_major { name '${ele|conv:m=>ft}'; } [0x20 resolution 20-21 continue]
+ contour=elevation & contour_ext=elevation_major { name '${ele|conv:m=>ft}'; } [0x22 resolution 22]
+ contour=elevation | contour_ext=elevation { name '${ele|conv:m=>ft}'; } [0x26 resolution 24]
 
 # 100m
-contour=elevation & ele ~ '\d*00' { name '${ele}'; } [0x20 resolution 19-22 continue]
-contour=elevation & ele ~ '\d*00' { name '${ele}'; } [0x22 resolution 23]
+#contour=elevation & ele ~ '\d*00' { name '${ele|conv:m=>ft}'; } [0x20 resolution 19-21 continue]
+#contour=elevation & ele ~ '\d*00' { name '${ele|conv:m=>ft}'; } [0x22 resolution 22]
 
 # 50m
-contour=elevation & ele ~ '.*\d[0,5]0' { name '${ele}'; } [0x20 resolution 19-22 continue]
-contour=elevation & ele ~ '.*\d[0,5]0' { name '${ele}'; } [0x22 resolution 23]
+#contour=elevation & ele ~ '.*\d[0,5]0' { name '${ele|conv:m=>ft}'; } [0x20 resolution 19-21 continue]
+#contour=elevation & ele ~ '.*\d[0,5]0' { name '${ele|conv:m=>ft}'; } [0x22 resolution 22]
 
 # 20m
-contour=elevation & ele ~ '.*\d[0,2,4,6,8]0' { name '${ele}'; } [0x20 resolution 23]
+#contour=elevation & ele ~ '.*\d[0,2,4,6,8]0' { name '${ele|conv:m=>ft}'; } [0x22 resolution 22]
 
 # 10m
-contour=elevation { name '${ele}'; } [0x20 resolution 24]
+#contour=elevation & ele ~ '.*\d[0]' { name '${ele|conv:m=>ft}'; } [0x21 resolution 23]
 
+# 5m
+#contour=elevation { name '${ele|conv:m=>ft}'; } [0x20 resolution 24]
