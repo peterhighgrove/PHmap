@@ -18,12 +18,12 @@
 $areaSrcFilePrefix = "sweden"
 $country = "Sweden"
 $countryShort = "SE"
-$area = "SE"
+$area = "SEall"
 $descSuffix = ""
 $pidd = 1000
 $date = 240907
 #>
-<#
+#<#
 $areaSrcFilePrefix = "languedoc-roussillon"
 $country = "France"
 $countryShort = "FR"
@@ -32,7 +32,7 @@ $descSuffix = ""
 $pidd = 2000
 $date = 240907
 #>
-#<#
+<#
 $areaSrcFilePrefix = "rhone-alpes"
 $country = "France"
 $countryShort = "FR"
@@ -65,7 +65,7 @@ $splitterArgs = $splitterArgs + ' --description=' + $area + $descSuffix + '_' + 
 Write-Output $javaArgs
 Write-Output $splitterArgs
 
-Start-Process -FilePath "C:\Program Files (x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $splitterArgsOutDir ,$splitterArgs, $srcFile -NoNewWindow -Wait
+Start-Process -FilePath "C:\Program Files (x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $splitterArgs, $srcFile -NoNewWindow -Wait
 
 # From .BAT    java -Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\splitter\splitter.jar" --output-dir="C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE" --mapid=63210001 --description=SE_240901_OSM_tile "C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf" > SEsplitter.log
 
