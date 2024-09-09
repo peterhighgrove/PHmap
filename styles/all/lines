@@ -131,7 +131,7 @@ highway=primary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x03 road_class
 
 highway=primary_link [0x0f road_class=3 road_speed=1 resolution 23]
 
-highway=secondary {delete name} [0x10e04 resolution 18-18 continue]
+highway=secondary {delete name} [0x10e04 resolution 18-20 continue]
 highway=secondary {delete name} [0x04 resolution 21-23 continue]
 highway=secondary {name '${ref}-${name}' | '${name}' | '${ref}' } [0x04 road_class=2 road_speed=4 resolution 24]
 
