@@ -14,7 +14,7 @@
  FRalps pid3000
 #>
 
-<#
+#<#
 $areaSrcFilePrefix = "sweden"
 $country = "Sweden"
 $countryShort = "SE"
@@ -23,7 +23,7 @@ $descSuffix = ""
 $pidd = 1000
 $date = 240907
 #>
-#<#
+<#
 $areaSrcFilePrefix = "languedoc-roussillon"
 $country = "France"
 $countryShort = "FR"
