@@ -13,8 +13,9 @@
  FRlang pid2000
  FRalps pid3000
 #>
+$doSplitting = 0
 
-#<#
+<#
 $areaSrcFilePrefix = "sweden"
 $country = "Sweden"
 $countryShort = "SE"
@@ -32,42 +33,56 @@ $descSuffix = ""
 $pidd = 2000
 $date = 240907
 #>
-<#
+#<#
 $areaSrcFilePrefix = "rhone-alpes"
 $country = "France"
 $countryShort = "FR"
-$area = "FRalps"
+$area = "bbFRalps"
 $descSuffix = ""
 $pidd = 3000
 $date = 240805
 #>
 
 $osmFolder = "C:\Users\peter\Documents\Maps Garmin\OSMsplitted"
-$osmSplittedAreaFolder = $osmFolder         #Splitter do not allow to end with \
+$osmSplittedAreaFolder = $osmFolder + '\' + $area        #Splitter do not allow to end with \
 
-if (! (Test-Path -Path $osmSplittedAreaFolder)) {
-     New-Item -ItemType Directory -Path $osmSplittedAreaFolder }
+if ($doSplitting) {
+  <# Action to perform if the condition is true #>
+
+  if (! (Test-Path -Path $osmSplittedAreaFolder)) {
+      New-Item -ItemType Directory -Path $osmSplittedAreaFolder }
+  else {
+      del ($osmSplittedAreaFolder + '\*') 
+  }
+
+  del "C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps\*"
+  #cd $osmSplittedAreaFolder  # Only needed for pyHgtMap
+
+  $srcFolder = "C:\Users\peter\Documents\Maps Garmin\OSMlatest\"
+  $srcFile = '"' + $srcFolder + $areaSrcFilePrefix + '-latest.osm.pbf"'
+
+  $javaArgs='-Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\Splitter\splitter.jar"'
+  $splitterArgs = ''
+  $splitterArgs = $splitterArgs + ' --output-dir="' + $osmSplittedAreaFolder + '"'
+  $splitterArgs = $splitterArgs + ' --mapid=6328' + $pidd
+  $splitterArgs = $splitterArgs + ' --description=' + $area + $descSuffix + '_' + $date + '_OSMtile'
+  # > ' + $area + 'splitter.log'
+  Write-Output $javaArgs
+  Write-Output $splitterArgs
+
+  Start-Process -FilePath "C:\Program Files (x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $splitterArgs, $srcFile -NoNewWindow -Wait
+
+  # From .BAT    java -Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\splitter\splitter.jar" --output-dir="C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE" --mapid=63210001 --description=SE_240901_OSM_tile "C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf" > SEsplitter.log
+}
 else {
-    del ($osmSplittedAreaFolder + '\*') }
-
-del "C:\Users\peter\Documents\Maps Garmin\OSM_Gmaps\*"
-#cd $osmSplittedAreaFolder  # Only needed for pyHgtMap
-
-$srcFolder = "C:\Users\peter\Documents\Maps Garmin\OSMlatest\"
-$srcFile = '"' + $srcFolder + $areaSrcFilePrefix + '-latest.osm.pbf"'
-
-$javaArgs='-Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\Splitter\splitter.jar"'
-$splitterArgs = ''
-$splitterArgs = $splitterArgs + ' --output-dir="' + $osmSplittedAreaFolder + '"'
-$splitterArgs = $splitterArgs + ' --mapid=6328' + $pidd
-$splitterArgs = $splitterArgs + ' --description=' + $area + $descSuffix + '_' + $date + '_OSMtile'
-# > ' + $area + 'splitter.log'
-Write-Output $javaArgs
-Write-Output $splitterArgs
-
-Start-Process -FilePath "C:\Program Files (x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $splitterArgs, $srcFile -NoNewWindow -Wait
-
-# From .BAT    java -Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\splitter\splitter.jar" --output-dir="C:\Users\peter\Documents\Maps Garmin\OSMsplitted\SE" --mapid=63210001 --description=SE_240901_OSM_tile "C:\Users\peter\Documents\Maps Garmin\OSMlatest\sweden-latest.osm.pbf" > SEsplitter.log
+  if (! (Test-Path -Path $osmSplittedAreaFolder)) {
+    Write-Output 'NO SPLITTED DATA @ ' + $osmSplittedAreaFolder
+    Exit
+  }
+  else {
+    del ($osmSplittedAreaFolder + '\*') 
+  }
+}
 
 $templateFile = $osmSplittedAreaFolder + "\template.args"
 $javaArgs='-Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\mkgmap.jar"'
