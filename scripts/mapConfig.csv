@@ -1,0 +1,30 @@
+﻿Type,doPreStep,areaSrcFilePrefix,country,countryShort,area,descSuffix,pidd,date,drawPrio,contourStep,contourMinor,contourMajor
+# doPreStep = spl -> Run splitter
+# SEallCont pid5000 - Sth, Nora, Öre, västerås, Etuna, Uppsala N59E14-19 (lon14-19 lat59), Järvsö, Delsbo N61E16 (lon16 lat61), Åre, Oviksfj N62-63E13 (lon13 lat62-63)
+# SEsveaCont pi5300-5-20-40 - Sth, Nora, Öre, västerås, Etuna, Uppsala N59E14-19 (lon14-19 lat59)
+# SEsthCont pid5100 - Boo, Viby, Gnesta, Ornö, Sandhamn, Norrtälje, uppsala, Enköping N59E17-18 (lon17-18lat59)
+# SEbruksCont pid5200 - Bruks, Funäs, Hamra, N62E12 (lon12lat62)
+# SEnorrCont pid5400 - Åre, Ovik, Järvsö, Bruks, Funäs, Hamra
+# FRlangCont pid6000 6100, 6200-15-75-300, 6300-10-50-250
+# FRalpsCont 6500-15-75-300, 6600 10,50,250
+# SEsveaCont
+cont,hgt,,Sweden,SE,SEsveaCont,_hgt,5700,240805,,2,10,40
+stopHere
+cont,hgt,,Sweden,SE,SEsveaCont,_hgt,5300,240805,,5,20,40
+cont,hgt,,Sweden,SE,SEallCont,_hgt,5000,240805,,5,20,40
+# SEnorrCont
+cont,hgt,,Sweden,SE,SEnorrCont,_hgt,5400,240805,,5,20,40
+cont,hgt,,Sweden,SE,SEnorrCont,_hgt,5500,240805,,5,25,100
+cont,hgt,,Sweden,SE,SEnorrCont,_hgt,5600,240805,,10,50,200
+# FRlangCont
+cont,hgt,,France,FR,FRlangCont,_hgt,6000,240805,,5,25,100
+cont,hgt,,France,FR,FRlangCont,_hgt,6100,240805,,10,50,200
+cont,hgt,,France,FR,FRlangCont,_hgt,6200,240805,,15,75,300
+# FRalpsCont
+cont,hgt,,France,FR,FRalpsCont,_hgt,7000,240805,,5,25,100
+cont,hgt,,France,FR,FRalpsCont,_hgt,7200,240805,,15,75,300
+cont,0,,France,FR,FRalpsCont,_hgt,7100,240805,,10,50,200
+# MAPS
+map,0,sweden,Sweden,SE,SEall,,1000,240913
+map,0,languedoc-roussillon,France,FR,FRlang,,2000,240913
+map,0,rhone-alpes,France,FR,FRalps,,2100,240805
