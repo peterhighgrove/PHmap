@@ -92,6 +92,7 @@ ForEach ($row in $mapCreateConfig) {
 
     $javaArgs='-Xmx8G -jar "C:\Users\peter\Documents\Maps Garmin\MKGmap\Splitter\splitter.jar"'
     $splitterArgs = ''
+    $splitterArgs = $splitterArgs + ' --max-nodes=1000000'
     $splitterArgs = $splitterArgs + ' --output-dir="' + $osmSplittedAreaFolder + '"'
     $splitterArgs = $splitterArgs + ' --mapid=6328' + $row.pidd
     $splitterArgs = $splitterArgs + ' --description=' + $row.area + $row.descSuffix + '_' + $row.date + '_OSMtile'
@@ -103,7 +104,7 @@ ForEach ($row in $mapCreateConfig) {
     Write-Host '-----------------------------'
     Write-Host ($(Get-Date -format "HH:mm:ss") + ' Starting splitter...')
 
-    Start-Process -FilePath "C:\Program Files  z(x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $splitterArgs -Wait -RedirectStandardOutput ('C:\Users\peter\Documents\logSpl' + $row.area + $row.descSuffix + '.log') -NoNewWindow
+    Start-Process -FilePath "C:\Program Files\Java\jdk-23\bin\Java.exe" -ArgumentList $javaArgs, $splitterArgs -Wait -RedirectStandardOutput ('C:\Users\peter\Documents\logSpl' + $row.area + $row.descSuffix + '.log') -NoNewWindow
     Write-Host ($(Get-Date -format "HH:mm:ss") + ' Splitter ready.')
   }
   # ------------------------------------------------------
@@ -193,7 +194,7 @@ ForEach ($row in $mapCreateConfig) {
   Write-Host '-----------------------------'
 
   Write-Host ($(Get-Date -format "HH:mm:ss") + ' Starting mkGmap...')
-  Start-Process -FilePath "C:\Program Files (x86)\Common Files\Oracle\Java\java8path\Java.exe" -ArgumentList $javaArgs, $mkGmapsArgs -Wait -NoNewWindow
+  Start-Process -FilePath "C:\Program Files\Java\jdk-23\bin\Java.exe" -ArgumentList $javaArgs, $mkGmapsArgs -Wait -NoNewWindow
   Write-Host ($(Get-Date -format "HH:mm:ss") + ' mkGmap ready.')
 
   $newFileName = $mapDescription + '.img'

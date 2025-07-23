@@ -7,9 +7,9 @@
 # SEnorrCont pid5400 - Åre, Ovik, Järvsö, Bruks, Funäs, Hamra
 # FRlangCont pid6000 6100, 6200-15-75-300, 6300-10-50-250
 # FRalpsCont 6500-15-75-300, 6600 10,50,250
+stopHere
 # SEsveaCont
 cont,hgt,,Sweden,SE,SEsveaCont,_hgt,5700,240805,,2,10,40
-stopHere
 cont,hgt,,Sweden,SE,SEsveaCont,_hgt,5300,240805,,5,20,40
 cont,hgt,,Sweden,SE,SEallCont,_hgt,5000,240805,,5,20,40
 # SEnorrCont
@@ -24,7 +24,13 @@ cont,hgt,,France,FR,FRlangCont,_hgt,6200,240805,,15,75,300
 cont,hgt,,France,FR,FRalpsCont,_hgt,7000,240805,,5,25,100
 cont,hgt,,France,FR,FRalpsCont,_hgt,7200,240805,,15,75,300
 cont,0,,France,FR,FRalpsCont,_hgt,7100,240805,,10,50,200
+# CHallCont
+cont,hgt,,Switzerland,CH,CHallCont,_hgt,4100,250622,,5,25,100
+cont,hgt,,Switzerland,CH,CHallCont,_hgt,4200,250622,,10,50,200
+cont,hgt,,Switzerland,CH,CHallCont,_hgt,4300,250622,,15,75,300
 # MAPS
-map,0,sweden,Sweden,SE,SEall,,1000,240913
-map,0,languedoc-roussillon,France,FR,FRlang,,2000,240913
-map,0,rhone-alpes,France,FR,FRalps,,2100,240805
+map,spl,sweden,Sweden,SE,SEall,,1000,250622
+map,spl,languedoc-roussillon,France,FR,FRlang,,2000,250622
+map,spl,switzerland,Switzerland,CH,CHall,,4000,250622
+map,spl,rhone-alpes,France,FR,FRalps,,2100,240805
+map,spl,british-columbia,Canada,CA,CAbc,,3000,241215
