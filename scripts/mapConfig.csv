@@ -7,6 +7,7 @@
 # SEnorrCont pid5400 - Åre, Ovik, Järvsö, Bruks, Funäs, Hamra
 # FRlangCont pid6000 6100, 6200-15-75-300, 6300-10-50-250
 # FRalpsCont 6500-15-75-300, 6600 10,50,250
+map,0,sweden,Sweden,SE,SEall,,1000,250622
 stopHere
 # SEsveaCont
 cont,hgt,,Sweden,SE,SEsveaCont,_hgt,5700,240805,,2,10,40

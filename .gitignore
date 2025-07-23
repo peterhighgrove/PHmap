@@ -1,0 +1,4 @@
+# The PS config file that I changes to tell the PS what to do.
+scripts/mapConfig.csv
+# A copy (maybe a backup) that mkgmap create automatically every time run.
+typ/xphTyp25.typ
